@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		398259F01F9A3067004ED28B /* SignInTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398259EF1F9A3067004ED28B /* SignInTextField.swift */; };
+		398259F31F9A3391004ED28B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398259F21F9A3391004ED28B /* Colors.swift */; };
 		39EC41E11F9A223300071ED1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC41E01F9A223300071ED1 /* AppDelegate.swift */; };
 		39EC41E31F9A223300071ED1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC41E21F9A223300071ED1 /* ViewController.swift */; };
 		39EC41E61F9A223300071ED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39EC41E41F9A223300071ED1 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		1A995245EABB95723F7DA30A /* Pods-TheSocialNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheSocialNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheSocialNetwork/Pods-TheSocialNetwork.debug.xcconfig"; sourceTree = "<group>"; };
+		398259EF1F9A3067004ED28B /* SignInTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTextField.swift; sourceTree = "<group>"; };
+		398259F21F9A3391004ED28B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		39EC41DD1F9A223300071ED1 /* TheSocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheSocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39EC41E01F9A223300071ED1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39EC41E21F9A223300071ED1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +85,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		398259EE1F9A3022004ED28B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				398259EF1F9A3067004ED28B /* SignInTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		398259F11F9A337A004ED28B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				398259F21F9A3391004ED28B /* Colors.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		39EC41D41F9A223300071ED1 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +126,8 @@
 		39EC41DF1F9A223300071ED1 /* TheSocialNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				398259F11F9A337A004ED28B /* Constants */,
+				398259EE1F9A3022004ED28B /* Views */,
 				39EC41E01F9A223300071ED1 /* AppDelegate.swift */,
 				39EC41E21F9A223300071ED1 /* ViewController.swift */,
 				39EC41E41F9A223300071ED1 /* Main.storyboard */,
@@ -344,6 +366,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				39EC41E31F9A223300071ED1 /* ViewController.swift in Sources */,
+				398259F31F9A3391004ED28B /* Colors.swift in Sources */,
+				398259F01F9A3067004ED28B /* SignInTextField.swift in Sources */,
 				39EC41E11F9A223300071ED1 /* AppDelegate.swift in Sources */,
 				39EC41E91F9A223300071ED1 /* TheSocialNetwork.xcdatamodeld in Sources */,
 			);
