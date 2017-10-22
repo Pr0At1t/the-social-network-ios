@@ -51,6 +51,7 @@ class SignInTextField: UITextField, UITextFieldDelegate {
 		self.backgroundColor = CustomColors.translucentWhiteA20
 		self.textColor = UIColor.white
 		self.borderStyle = .none
+        self.font = UIFont.systemFont(ofSize: 18)
 	}
 
 	// MARK: - UITextFieldDelegate
