@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		398259F01F9A3067004ED28B /* SignInTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398259EF1F9A3067004ED28B /* SignInTextField.swift */; };
 		398259F31F9A3391004ED28B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398259F21F9A3391004ED28B /* Colors.swift */; };
+		39B6DC581F9CFE2D005526ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39B6DC571F9CFE2D005526ED /* GoogleService-Info.plist */; };
+		39B6DC591F9CFE76005526ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39B6DC571F9CFE2D005526ED /* GoogleService-Info.plist */; };
+		39B6DC5A1F9CFE77005526ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39B6DC571F9CFE2D005526ED /* GoogleService-Info.plist */; };
 		39EC41E11F9A223300071ED1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC41E01F9A223300071ED1 /* AppDelegate.swift */; };
-		39EC41E31F9A223300071ED1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC41E21F9A223300071ED1 /* ViewController.swift */; };
+		39EC41E31F9A223300071ED1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC41E21F9A223300071ED1 /* SignInViewController.swift */; };
 		39EC41E61F9A223300071ED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39EC41E41F9A223300071ED1 /* Main.storyboard */; };
 		39EC41E91F9A223300071ED1 /* TheSocialNetwork.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39EC41E71F9A223300071ED1 /* TheSocialNetwork.xcdatamodeld */; };
 		39EC41EB1F9A223300071ED1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39EC41EA1F9A223300071ED1 /* Assets.xcassets */; };
@@ -42,9 +45,11 @@
 		1A995245EABB95723F7DA30A /* Pods-TheSocialNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheSocialNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheSocialNetwork/Pods-TheSocialNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 		398259EF1F9A3067004ED28B /* SignInTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTextField.swift; sourceTree = "<group>"; };
 		398259F21F9A3391004ED28B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		39B6DC571F9CFE2D005526ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		39B6DC5C1F9D0206005526ED /* TheSocialNetwork-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TheSocialNetwork-Bridging-Header.h"; sourceTree = "<group>"; };
 		39EC41DD1F9A223300071ED1 /* TheSocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheSocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39EC41E01F9A223300071ED1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		39EC41E21F9A223300071ED1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		39EC41E21F9A223300071ED1 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		39EC41E51F9A223300071ED1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39EC41E81F9A223300071ED1 /* TheSocialNetwork.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheSocialNetwork.xcdatamodel; sourceTree = "<group>"; };
 		39EC41EA1F9A223300071ED1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,6 +120,7 @@
 		39EC41D41F9A223300071ED1 = {
 			isa = PBXGroup;
 			children = (
+				39B6DC5C1F9D0206005526ED /* TheSocialNetwork-Bridging-Header.h */,
 				39EC41DF1F9A223300071ED1 /* TheSocialNetwork */,
 				39EC41F71F9A223300071ED1 /* TheSocialNetworkTests */,
 				39EC42021F9A223300071ED1 /* TheSocialNetworkUITests */,
@@ -137,10 +143,11 @@
 		39EC41DF1F9A223300071ED1 /* TheSocialNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				39B6DC571F9CFE2D005526ED /* GoogleService-Info.plist */,
 				398259F11F9A337A004ED28B /* Constants */,
 				398259EE1F9A3022004ED28B /* Views */,
 				39EC41E01F9A223300071ED1 /* AppDelegate.swift */,
-				39EC41E21F9A223300071ED1 /* ViewController.swift */,
+				39EC41E21F9A223300071ED1 /* SignInViewController.swift */,
 				39EC41E41F9A223300071ED1 /* Main.storyboard */,
 				39EC41EA1F9A223300071ED1 /* Assets.xcassets */,
 				39EC41EC1F9A223300071ED1 /* LaunchScreen.storyboard */,
@@ -298,6 +305,7 @@
 			files = (
 				39EC41EE1F9A223300071ED1 /* LaunchScreen.storyboard in Resources */,
 				39EC41EB1F9A223300071ED1 /* Assets.xcassets in Resources */,
+				39B6DC581F9CFE2D005526ED /* GoogleService-Info.plist in Resources */,
 				6A9FF2201F9C59C400E36B14 /* SignUp.storyboard in Resources */,
 				39EC41E61F9A223300071ED1 /* Main.storyboard in Resources */,
 			);
@@ -307,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39B6DC591F9CFE76005526ED /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39B6DC5A1F9CFE77005526ED /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,10 +337,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TheSocialNetwork/Pods-TheSocialNetwork-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,9 +391,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TheSocialNetwork/Pods-TheSocialNetwork-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -391,7 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39EC41E31F9A223300071ED1 /* ViewController.swift in Sources */,
+				39EC41E31F9A223300071ED1 /* SignInViewController.swift in Sources */,
 				398259F31F9A3391004ED28B /* Colors.swift in Sources */,
 				398259F01F9A3067004ED28B /* SignInTextField.swift in Sources */,
 				39EC41E11F9A223300071ED1 /* AppDelegate.swift in Sources */,
@@ -567,6 +586,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.proatit.TheSocialNetwork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TheSocialNetwork-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -582,6 +603,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.proatit.TheSocialNetwork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TheSocialNetwork-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -6,4 +6,6 @@ target 'TheSocialNetwork' do
 
     pod 'ReSwift'
     pod 'SwiftLint'
+    pod 'GoogleSignIn'
+    pod 'Google/SignIn'
 end
