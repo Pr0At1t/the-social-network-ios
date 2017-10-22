@@ -5,4 +5,5 @@ target 'TheSocialNetwork' do
     platform :ios, '8.0'
 
     pod 'ReSwift'
+    pod 'SwiftLint'
 end

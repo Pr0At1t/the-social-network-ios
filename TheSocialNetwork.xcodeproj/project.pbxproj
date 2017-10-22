@@ -195,6 +195,7 @@
 				39EC41DB1F9A223300071ED1 /* Resources */,
 				341B1AB541BBD61133730972 /* [CP] Embed Pods Frameworks */,
 				E0B423520CE393286D92F3F6 /* [CP] Copy Pods Resources */,
+				39915F481F9C3A6200861A37 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -332,6 +333,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TheSocialNetwork/Pods-TheSocialNetwork-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		39915F481F9C3A6200861A37 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint";
 		};
 		4B3CD9F57072AB2AF48CE058 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
