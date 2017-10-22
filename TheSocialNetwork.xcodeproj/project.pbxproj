@@ -17,6 +17,7 @@
 		39EC41EE1F9A223300071ED1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39EC41EC1F9A223300071ED1 /* LaunchScreen.storyboard */; };
 		39EC41F91F9A223300071ED1 /* TheSocialNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC41F81F9A223300071ED1 /* TheSocialNetworkTests.swift */; };
 		39EC42041F9A223300071ED1 /* TheSocialNetworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC42031F9A223300071ED1 /* TheSocialNetworkUITests.swift */; };
+		6A9FF2201F9C59C400E36B14 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9FF21F1F9C59C400E36B14 /* SignUp.storyboard */; };
 		BF525D85441663AC7E7AB079 /* Pods_TheSocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8930435FC18E799EFD9913DF /* Pods_TheSocialNetwork.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		39EC42031F9A223300071ED1 /* TheSocialNetworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheSocialNetworkUITests.swift; sourceTree = "<group>"; };
 		39EC42051F9A223300071ED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DD115965926E021CC16B563 /* Pods-TheSocialNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheSocialNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheSocialNetwork/Pods-TheSocialNetwork.release.xcconfig"; sourceTree = "<group>"; };
+		6A9FF21F1F9C59C400E36B14 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		8930435FC18E799EFD9913DF /* Pods_TheSocialNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheSocialNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				39915F451F9C11CD00861A37 /* SignIn */,
+				6A9FF21F1F9C59C400E36B14 /* SignUp.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			files = (
 				39EC41EE1F9A223300071ED1 /* LaunchScreen.storyboard in Resources */,
 				39EC41EB1F9A223300071ED1 /* Assets.xcassets in Resources */,
+				6A9FF2201F9C59C400E36B14 /* SignUp.storyboard in Resources */,
 				39EC41E61F9A223300071ED1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
