@@ -88,7 +88,7 @@
 		398259EE1F9A3022004ED28B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				398259EF1F9A3067004ED28B /* SignInTextField.swift */,
+				39915F451F9C11CD00861A37 /* SignIn */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -99,6 +99,14 @@
 				398259F21F9A3391004ED28B /* Colors.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		39915F451F9C11CD00861A37 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				398259EF1F9A3067004ED28B /* SignInTextField.swift */,
+			);
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 		39EC41D41F9A223300071ED1 = {
