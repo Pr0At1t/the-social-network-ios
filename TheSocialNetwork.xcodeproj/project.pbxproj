@@ -21,6 +21,8 @@
 		39EC41EE1F9A223300071ED1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39EC41EC1F9A223300071ED1 /* LaunchScreen.storyboard */; };
 		39EC41F91F9A223300071ED1 /* TheSocialNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC41F81F9A223300071ED1 /* TheSocialNetworkTests.swift */; };
 		39EC42041F9A223300071ED1 /* TheSocialNetworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC42031F9A223300071ED1 /* TheSocialNetworkUITests.swift */; };
+		6A63EA0B1F9D4BB800D2D12E /* UserSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A63EA0A1F9D4BB800D2D12E /* UserSearch.storyboard */; };
+		6A63EA111F9D53A800D2D12E /* UserSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A63EA101F9D53A800D2D12E /* UserSearchTableViewController.swift */; };
 		6A9FF2201F9C59C400E36B14 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9FF21F1F9C59C400E36B14 /* SignUp.storyboard */; };
 		BF525D85441663AC7E7AB079 /* Pods_TheSocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8930435FC18E799EFD9913DF /* Pods_TheSocialNetwork.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +66,8 @@
 		39EC42031F9A223300071ED1 /* TheSocialNetworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheSocialNetworkUITests.swift; sourceTree = "<group>"; };
 		39EC42051F9A223300071ED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DD115965926E021CC16B563 /* Pods-TheSocialNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheSocialNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheSocialNetwork/Pods-TheSocialNetwork.release.xcconfig"; sourceTree = "<group>"; };
+		6A63EA0A1F9D4BB800D2D12E /* UserSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserSearch.storyboard; sourceTree = "<group>"; };
+		6A63EA101F9D53A800D2D12E /* UserSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchTableViewController.swift; sourceTree = "<group>"; };
 		6A9FF21F1F9C59C400E36B14 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		8930435FC18E799EFD9913DF /* Pods_TheSocialNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheSocialNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -99,6 +103,8 @@
 			children = (
 				39915F451F9C11CD00861A37 /* SignIn */,
 				6A9FF21F1F9C59C400E36B14 /* SignUp.storyboard */,
+				6A63EA0A1F9D4BB800D2D12E /* UserSearch.storyboard */,
+				6A63EA101F9D53A800D2D12E /* UserSearchTableViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -311,6 +317,7 @@
 				39B6DC581F9CFE2D005526ED /* GoogleService-Info.plist in Resources */,
 				6A9FF2201F9C59C400E36B14 /* SignUp.storyboard in Resources */,
 				39EC41E61F9A223300071ED1 /* Main.storyboard in Resources */,
+				6A63EA0B1F9D4BB800D2D12E /* UserSearch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +352,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -353,6 +361,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -420,6 +429,7 @@
 				398259F31F9A3391004ED28B /* Colors.swift in Sources */,
 				398259F01F9A3067004ED28B /* SignInTextField.swift in Sources */,
 				39EC41E11F9A223300071ED1 /* AppDelegate.swift in Sources */,
+				6A63EA111F9D53A800D2D12E /* UserSearchTableViewController.swift in Sources */,
 				39EC41E91F9A223300071ED1 /* TheSocialNetwork.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

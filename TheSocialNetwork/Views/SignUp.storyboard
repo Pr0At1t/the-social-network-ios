@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ewD-Bf-X8c">
-                                <rect key="frame" x="30" y="130" width="315" height="430"/>
+                                <rect key="frame" x="30" y="170" width="315" height="430"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WHr-9Y-gLc" userLabel="Email" customClass="SignInTextField" customModule="TheSocialNetwork" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>

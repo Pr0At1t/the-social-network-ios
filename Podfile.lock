@@ -37,6 +37,7 @@ PODS:
     - GTMSessionFetcher/Core (= 1.1.9)
   - ReSwift (4.0.0)
   - SwiftLint (0.18.1)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire
@@ -44,20 +45,22 @@ DEPENDENCIES:
   - GoogleSignIn
   - ReSwift
   - SwiftLint
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   FirebaseAnalytics: e5fe8486efc01bec33f6bf82e2fa9fce4b124052
   FirebaseCore: 9691ee2ade70c098d7cf92440f4303f16d83ca75
   FirebaseInstanceID: b9eedd6846fb5e1f0f7279e1deaa7a7e4cf8392e
-  Google: 813c467362eabc11385f5a5cc9ad0cb651a58f4e
+  Google: cd92fab98f800f509da88c1e0c570275713bc9d5
   GoogleSignIn: d7ad83f13480e1f30453471d00d19b5293ac46af
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
   ReSwift: f058ef13b46ae5f463f10605ccbbb7fb04424d8d
   SwiftLint: b467d08f5b25dc3b3cfed243d8e1b74b91714c67
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 030304c74aac96230e35e4bd0850b80ec669b520
+PODFILE CHECKSUM: e18593f2285cd16bb3f109e078f2773169891aef
 
 COCOAPODS: 1.3.1

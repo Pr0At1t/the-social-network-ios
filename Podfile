@@ -9,4 +9,5 @@ target 'TheSocialNetwork' do
     pod 'GoogleSignIn'
     pod 'Google/SignIn'
     pod 'Alamofire'
+    pod 'SwiftyJSON'
 end
