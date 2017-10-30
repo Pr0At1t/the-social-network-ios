@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -109,14 +110,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 		// Perform any operations on signed in user here.
 		// TODO: Use the following properties
 		_ = user.userID                  // For client-side use only!
-		_ = user.authentication.idToken // Safe to send to the server
+		let googleIdToken = user.authentication.idToken // Safe to send to the server
 		let fullName = user.profile.name
 		_ = user.profile.givenName
 		_ = user.profile.familyName
 		_ = user.profile.email
 		// ...
 
-		print("Full Name: \(String(describing: fullName))")
+		print(user.profile)
+
+		let parameters: [String: Any] = [
+			"googleIdToken": googleIdToken!
+		]
+
+		Alamofire.request(
+			"\(Keys.apiBaseUrl)/googleLogin",
+			method: .post,
+			parameters: parameters,
+			encoding: JSONEncoding.default
+			).responseJSON { response in
+				print(response)
+		}
+
+
+		print("Full Name: \(String(describing: googleIdToken!))")
 	}
 
 	func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {

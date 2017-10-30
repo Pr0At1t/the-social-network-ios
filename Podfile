@@ -8,4 +8,5 @@ target 'TheSocialNetwork' do
     pod 'SwiftLint'
     pod 'GoogleSignIn'
     pod 'Google/SignIn'
+    pod 'Alamofire'
 end

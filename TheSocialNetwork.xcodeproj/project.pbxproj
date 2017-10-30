@@ -12,6 +12,7 @@
 		39B6DC581F9CFE2D005526ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39B6DC571F9CFE2D005526ED /* GoogleService-Info.plist */; };
 		39B6DC591F9CFE76005526ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39B6DC571F9CFE2D005526ED /* GoogleService-Info.plist */; };
 		39B6DC5A1F9CFE77005526ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39B6DC571F9CFE2D005526ED /* GoogleService-Info.plist */; };
+		39B6DC5E1FA68CA4005526ED /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B6DC5D1FA68CA4005526ED /* Keys.swift */; };
 		39EC41E11F9A223300071ED1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC41E01F9A223300071ED1 /* AppDelegate.swift */; };
 		39EC41E31F9A223300071ED1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC41E21F9A223300071ED1 /* SignInViewController.swift */; };
 		39EC41E61F9A223300071ED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39EC41E41F9A223300071ED1 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		398259F21F9A3391004ED28B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		39B6DC571F9CFE2D005526ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		39B6DC5C1F9D0206005526ED /* TheSocialNetwork-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TheSocialNetwork-Bridging-Header.h"; sourceTree = "<group>"; };
+		39B6DC5D1FA68CA4005526ED /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		39EC41DD1F9A223300071ED1 /* TheSocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheSocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39EC41E01F9A223300071ED1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39EC41E21F9A223300071ED1 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				398259F21F9A3391004ED28B /* Colors.swift */,
+				39B6DC5D1FA68CA4005526ED /* Keys.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TheSocialNetwork/Pods-TheSocialNetwork-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -344,6 +348,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
@@ -411,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39EC41E31F9A223300071ED1 /* SignInViewController.swift in Sources */,
+				39B6DC5E1FA68CA4005526ED /* Keys.swift in Sources */,
 				398259F31F9A3391004ED28B /* Colors.swift in Sources */,
 				398259F01F9A3067004ED28B /* SignInTextField.swift in Sources */,
 				39EC41E11F9A223300071ED1 /* AppDelegate.swift in Sources */,
