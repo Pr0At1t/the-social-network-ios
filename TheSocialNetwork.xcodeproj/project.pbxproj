@@ -13,6 +13,11 @@
 		39B6DC591F9CFE76005526ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39B6DC571F9CFE2D005526ED /* GoogleService-Info.plist */; };
 		39B6DC5A1F9CFE77005526ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39B6DC571F9CFE2D005526ED /* GoogleService-Info.plist */; };
 		39B6DC5E1FA68CA4005526ED /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B6DC5D1FA68CA4005526ED /* Keys.swift */; };
+		39D5DC351FA7547100BA45C7 /* SignInState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5DC341FA7547100BA45C7 /* SignInState.swift */; };
+		39D5DC371FA7567000BA45C7 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5DC361FA7567000BA45C7 /* Authentication.swift */; };
+		39D5DC3A1FA7F39A00BA45C7 /* GoogleSignInAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5DC391FA7F39A00BA45C7 /* GoogleSignInAction.swift */; };
+		39D5DC3C1FA804D500BA45C7 /* GoogleSignInSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5DC3B1FA804D500BA45C7 /* GoogleSignInSuccess.swift */; };
+		39D5DC3F1FA8067800BA45C7 /* SignInReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5DC3E1FA8067800BA45C7 /* SignInReducer.swift */; };
 		39EC41E11F9A223300071ED1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC41E01F9A223300071ED1 /* AppDelegate.swift */; };
 		39EC41E31F9A223300071ED1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC41E21F9A223300071ED1 /* SignInViewController.swift */; };
 		39EC41E61F9A223300071ED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39EC41E41F9A223300071ED1 /* Main.storyboard */; };
@@ -21,10 +26,31 @@
 		39EC41EE1F9A223300071ED1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39EC41EC1F9A223300071ED1 /* LaunchScreen.storyboard */; };
 		39EC41F91F9A223300071ED1 /* TheSocialNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC41F81F9A223300071ED1 /* TheSocialNetworkTests.swift */; };
 		39EC42041F9A223300071ED1 /* TheSocialNetworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC42031F9A223300071ED1 /* TheSocialNetworkUITests.swift */; };
+		39F69A0A1FA6E60E006426CB /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F69A091FA6E60E006426CB /* AppState.swift */; };
+		39F69A0C1FA6E6F9006426CB /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F69A0B1FA6E6F9006426CB /* AppReducer.swift */; };
+		39F69A0E1FA6E89F006426CB /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F69A0D1FA6E89F006426CB /* AppRouter.swift */; };
+		39F69A101FA6E8F3006426CB /* RoutingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F69A0F1FA6E8F3006426CB /* RoutingState.swift */; };
+		39F69A121FA6ED1B006426CB /* RoutingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F69A111FA6ED1B006426CB /* RoutingReducer.swift */; };
+		39F69A1D1FA7194E006426CB /* RoutingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F69A1C1FA7194E006426CB /* RoutingAction.swift */; };
+		39F69A201FA722C2006426CB /* UserSearchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F69A1F1FA722C2006426CB /* UserSearchState.swift */; };
+		39F69A231FA72327006426CB /* UserSearchReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F69A221FA72327006426CB /* UserSearchReducer.swift */; };
+		39F69A261FA72463006426CB /* LoadUsersAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F69A251FA72463006426CB /* LoadUsersAction.swift */; };
+		39F69A281FA724C6006426CB /* FetchUsersAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F69A271FA724C6006426CB /* FetchUsersAction.swift */; };
+		39F69A2B1FA72568006426CB /* UserSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F69A2A1FA72568006426CB /* UserSearch.swift */; };
+		39F69A2D1FA7257F006426CB /* ApiClients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F69A2C1FA7257F006426CB /* ApiClients.swift */; };
+		5280E9D27DCA615E44920BC6 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F93D97FC99D325DCA1C7FF /* CoreText.framework */; };
+		64E04BB2010AE20634C51FDF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D36DF859E7BF4D40B739C16 /* AVFoundation.framework */; };
+		68EE3AE676979AC7FAB6BDB0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D140A40CB79D835BA2DAC11F /* CoreMedia.framework */; };
 		6A63EA0B1F9D4BB800D2D12E /* UserSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A63EA0A1F9D4BB800D2D12E /* UserSearch.storyboard */; };
 		6A63EA111F9D53A800D2D12E /* UserSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A63EA101F9D53A800D2D12E /* UserSearchTableViewController.swift */; };
 		6A9FF2201F9C59C400E36B14 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9FF21F1F9C59C400E36B14 /* SignUp.storyboard */; };
+		70FA1CC93589AEC5E2E60D1D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E7E9C10653A1156C99E7A0 /* CoreVideo.framework */; };
+		754B07CEF535E718FB6B6606 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0E5CB8576069791AAA54C1 /* CoreTelephony.framework */; };
+		832E76699832C1F4FFC7EB16 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F0DC83FC66BC8921ECF239 /* QuartzCore.framework */; };
 		BF525D85441663AC7E7AB079 /* Pods_TheSocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8930435FC18E799EFD9913DF /* Pods_TheSocialNetwork.framework */; };
+		C71267B9834A9C6AF82E6372 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADEC8AF75C2FEB0834ECCE8 /* SystemConfiguration.framework */; };
+		E17BA5F5A4281CC20DFA717C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E34406E312ACD1633A4B66B /* AssetsLibrary.framework */; };
+		FA0847E461C1E3B28808B68B /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6296BDD6ACA9A1B5C94D7A /* BuddyBuildSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +77,11 @@
 		39B6DC571F9CFE2D005526ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		39B6DC5C1F9D0206005526ED /* TheSocialNetwork-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TheSocialNetwork-Bridging-Header.h"; sourceTree = "<group>"; };
 		39B6DC5D1FA68CA4005526ED /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		39D5DC341FA7547100BA45C7 /* SignInState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInState.swift; sourceTree = "<group>"; };
+		39D5DC361FA7567000BA45C7 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		39D5DC391FA7F39A00BA45C7 /* GoogleSignInAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInAction.swift; sourceTree = "<group>"; };
+		39D5DC3B1FA804D500BA45C7 /* GoogleSignInSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInSuccess.swift; sourceTree = "<group>"; };
+		39D5DC3E1FA8067800BA45C7 /* SignInReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInReducer.swift; sourceTree = "<group>"; };
 		39EC41DD1F9A223300071ED1 /* TheSocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheSocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39EC41E01F9A223300071ED1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39EC41E21F9A223300071ED1 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -65,11 +96,32 @@
 		39EC41FF1F9A223300071ED1 /* TheSocialNetworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheSocialNetworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39EC42031F9A223300071ED1 /* TheSocialNetworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheSocialNetworkUITests.swift; sourceTree = "<group>"; };
 		39EC42051F9A223300071ED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39F69A091FA6E60E006426CB /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		39F69A0B1FA6E6F9006426CB /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		39F69A0D1FA6E89F006426CB /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		39F69A0F1FA6E8F3006426CB /* RoutingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingState.swift; sourceTree = "<group>"; };
+		39F69A111FA6ED1B006426CB /* RoutingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingReducer.swift; sourceTree = "<group>"; };
+		39F69A1C1FA7194E006426CB /* RoutingAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingAction.swift; sourceTree = "<group>"; };
+		39F69A1F1FA722C2006426CB /* UserSearchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchState.swift; sourceTree = "<group>"; };
+		39F69A221FA72327006426CB /* UserSearchReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchReducer.swift; sourceTree = "<group>"; };
+		39F69A251FA72463006426CB /* LoadUsersAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadUsersAction.swift; sourceTree = "<group>"; };
+		39F69A271FA724C6006426CB /* FetchUsersAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUsersAction.swift; sourceTree = "<group>"; };
+		39F69A2A1FA72568006426CB /* UserSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearch.swift; sourceTree = "<group>"; };
+		39F69A2C1FA7257F006426CB /* ApiClients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClients.swift; sourceTree = "<group>"; };
 		3DD115965926E021CC16B563 /* Pods-TheSocialNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheSocialNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheSocialNetwork/Pods-TheSocialNetwork.release.xcconfig"; sourceTree = "<group>"; };
+		60E7E9C10653A1156C99E7A0 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		6A63EA0A1F9D4BB800D2D12E /* UserSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserSearch.storyboard; sourceTree = "<group>"; };
 		6A63EA101F9D53A800D2D12E /* UserSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchTableViewController.swift; sourceTree = "<group>"; };
 		6A9FF21F1F9C59C400E36B14 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		6D36DF859E7BF4D40B739C16 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		76F0DC83FC66BC8921ECF239 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8930435FC18E799EFD9913DF /* Pods_TheSocialNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheSocialNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D6296BDD6ACA9A1B5C94D7A /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BuddyBuildSDK.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
+		91F93D97FC99D325DCA1C7FF /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		9E34406E312ACD1633A4B66B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		AADEC8AF75C2FEB0834ECCE8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D140A40CB79D835BA2DAC11F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		FC0E5CB8576069791AAA54C1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +130,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF525D85441663AC7E7AB079 /* Pods_TheSocialNetwork.framework in Frameworks */,
+				FA0847E461C1E3B28808B68B /* BuddyBuildSDK.framework in Frameworks */,
+				E17BA5F5A4281CC20DFA717C /* AssetsLibrary.framework in Frameworks */,
+				5280E9D27DCA615E44920BC6 /* CoreText.framework in Frameworks */,
+				754B07CEF535E718FB6B6606 /* CoreTelephony.framework in Frameworks */,
+				C71267B9834A9C6AF82E6372 /* SystemConfiguration.framework in Frameworks */,
+				832E76699832C1F4FFC7EB16 /* QuartzCore.framework in Frameworks */,
+				64E04BB2010AE20634C51FDF /* AVFoundation.framework in Frameworks */,
+				68EE3AE676979AC7FAB6BDB0 /* CoreMedia.framework in Frameworks */,
+				70FA1CC93589AEC5E2E60D1D /* CoreVideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,15 +159,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		398259EE1F9A3022004ED28B /* Views */ = {
+		398259EE1F9A3022004ED28B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				39D5DC2C1FA7518B00BA45C7 /* UserSearch */,
+				39F69A191FA71858006426CB /* Routing */,
 				39915F451F9C11CD00861A37 /* SignIn */,
-				6A9FF21F1F9C59C400E36B14 /* SignUp.storyboard */,
-				6A63EA0A1F9D4BB800D2D12E /* UserSearch.storyboard */,
-				6A63EA101F9D53A800D2D12E /* UserSearchTableViewController.swift */,
 			);
-			path = Views;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		398259F11F9A337A004ED28B /* Constants */ = {
@@ -121,7 +181,74 @@
 		39915F451F9C11CD00861A37 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				39EC41E21F9A223300071ED1 /* SignInViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		39D5DC2C1FA7518B00BA45C7 /* UserSearch */ = {
+			isa = PBXGroup;
+			children = (
+				6A63EA101F9D53A800D2D12E /* UserSearchTableViewController.swift */,
+			);
+			path = UserSearch;
+			sourceTree = "<group>";
+		};
+		39D5DC2D1FA7526800BA45C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				39D5DC301FA752A200BA45C7 /* Registration */,
+				39D5DC2F1FA7529700BA45C7 /* UserSearch */,
+				39D5DC2E1FA7526E00BA45C7 /* SignIn */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		39D5DC2E1FA7526E00BA45C7 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
 				398259EF1F9A3067004ED28B /* SignInTextField.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		39D5DC2F1FA7529700BA45C7 /* UserSearch */ = {
+			isa = PBXGroup;
+			children = (
+				6A63EA0A1F9D4BB800D2D12E /* UserSearch.storyboard */,
+			);
+			path = UserSearch;
+			sourceTree = "<group>";
+		};
+		39D5DC301FA752A200BA45C7 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				6A9FF21F1F9C59C400E36B14 /* SignUp.storyboard */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		39D5DC331FA7546400BA45C7 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				39D5DC341FA7547100BA45C7 /* SignInState.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		39D5DC381FA7F38000BA45C7 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				39D5DC391FA7F39A00BA45C7 /* GoogleSignInAction.swift */,
+				39D5DC3B1FA804D500BA45C7 /* GoogleSignInSuccess.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		39D5DC3D1FA8066D00BA45C7 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				39D5DC3E1FA8067800BA45C7 /* SignInReducer.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -152,11 +279,15 @@
 		39EC41DF1F9A223300071ED1 /* TheSocialNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				39D5DC2D1FA7526800BA45C7 /* Views */,
+				39F69A291FA72553006426CB /* ApiClients */,
+				39F69A1A1FA7193A006426CB /* Actions */,
+				39F69A141FA717BF006426CB /* Reducers */,
+				39F69A131FA717B5006426CB /* State */,
 				39B6DC571F9CFE2D005526ED /* GoogleService-Info.plist */,
 				398259F11F9A337A004ED28B /* Constants */,
-				398259EE1F9A3022004ED28B /* Views */,
+				398259EE1F9A3022004ED28B /* ViewControllers */,
 				39EC41E01F9A223300071ED1 /* AppDelegate.swift */,
-				39EC41E21F9A223300071ED1 /* SignInViewController.swift */,
 				39EC41E41F9A223300071ED1 /* Main.storyboard */,
 				39EC41EA1F9A223300071ED1 /* Assets.xcassets */,
 				39EC41EC1F9A223300071ED1 /* LaunchScreen.storyboard */,
@@ -184,10 +315,118 @@
 			path = TheSocialNetworkUITests;
 			sourceTree = "<group>";
 		};
+		39F69A131FA717B5006426CB /* State */ = {
+			isa = PBXGroup;
+			children = (
+				39D5DC331FA7546400BA45C7 /* SignIn */,
+				39F69A1E1FA722AF006426CB /* UserSearch */,
+				39F69A181FA71821006426CB /* Routing */,
+				39F69A091FA6E60E006426CB /* AppState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		39F69A141FA717BF006426CB /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				39D5DC3D1FA8066D00BA45C7 /* SignIn */,
+				39F69A211FA7230D006426CB /* UserSearch */,
+				39F69A151FA717D7006426CB /* Routing */,
+				39F69A0B1FA6E6F9006426CB /* AppReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		39F69A151FA717D7006426CB /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				39F69A111FA6ED1B006426CB /* RoutingReducer.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		39F69A181FA71821006426CB /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				39F69A0F1FA6E8F3006426CB /* RoutingState.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		39F69A191FA71858006426CB /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				39F69A0D1FA6E89F006426CB /* AppRouter.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		39F69A1A1FA7193A006426CB /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				39D5DC381FA7F38000BA45C7 /* SignIn */,
+				39F69A241FA7242F006426CB /* UserSearch */,
+				39F69A1B1FA7193F006426CB /* Routing */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		39F69A1B1FA7193F006426CB /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				39F69A1C1FA7194E006426CB /* RoutingAction.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		39F69A1E1FA722AF006426CB /* UserSearch */ = {
+			isa = PBXGroup;
+			children = (
+				39F69A1F1FA722C2006426CB /* UserSearchState.swift */,
+			);
+			path = UserSearch;
+			sourceTree = "<group>";
+		};
+		39F69A211FA7230D006426CB /* UserSearch */ = {
+			isa = PBXGroup;
+			children = (
+				39F69A221FA72327006426CB /* UserSearchReducer.swift */,
+			);
+			path = UserSearch;
+			sourceTree = "<group>";
+		};
+		39F69A241FA7242F006426CB /* UserSearch */ = {
+			isa = PBXGroup;
+			children = (
+				39F69A251FA72463006426CB /* LoadUsersAction.swift */,
+				39F69A271FA724C6006426CB /* FetchUsersAction.swift */,
+			);
+			path = UserSearch;
+			sourceTree = "<group>";
+		};
+		39F69A291FA72553006426CB /* ApiClients */ = {
+			isa = PBXGroup;
+			children = (
+				39F69A2A1FA72568006426CB /* UserSearch.swift */,
+				39F69A2C1FA7257F006426CB /* ApiClients.swift */,
+				39D5DC361FA7567000BA45C7 /* Authentication.swift */,
+			);
+			path = ApiClients;
+			sourceTree = "<group>";
+		};
 		9A72DD22FA0FFADCF92FC855 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				8930435FC18E799EFD9913DF /* Pods_TheSocialNetwork.framework */,
+				8D6296BDD6ACA9A1B5C94D7A /* BuddyBuildSDK.framework */,
+				9E34406E312ACD1633A4B66B /* AssetsLibrary.framework */,
+				91F93D97FC99D325DCA1C7FF /* CoreText.framework */,
+				FC0E5CB8576069791AAA54C1 /* CoreTelephony.framework */,
+				AADEC8AF75C2FEB0834ECCE8 /* SystemConfiguration.framework */,
+				76F0DC83FC66BC8921ECF239 /* QuartzCore.framework */,
+				6D36DF859E7BF4D40B739C16 /* AVFoundation.framework */,
+				D140A40CB79D835BA2DAC11F /* CoreMedia.framework */,
+				60E7E9C10653A1156C99E7A0 /* CoreVideo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -424,12 +663,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39F69A261FA72463006426CB /* LoadUsersAction.swift in Sources */,
 				39EC41E31F9A223300071ED1 /* SignInViewController.swift in Sources */,
+				39F69A121FA6ED1B006426CB /* RoutingReducer.swift in Sources */,
+				39D5DC3C1FA804D500BA45C7 /* GoogleSignInSuccess.swift in Sources */,
 				39B6DC5E1FA68CA4005526ED /* Keys.swift in Sources */,
+				39F69A1D1FA7194E006426CB /* RoutingAction.swift in Sources */,
+				39F69A0A1FA6E60E006426CB /* AppState.swift in Sources */,
 				398259F31F9A3391004ED28B /* Colors.swift in Sources */,
 				398259F01F9A3067004ED28B /* SignInTextField.swift in Sources */,
+				39D5DC3A1FA7F39A00BA45C7 /* GoogleSignInAction.swift in Sources */,
+				39F69A0E1FA6E89F006426CB /* AppRouter.swift in Sources */,
+				39D5DC351FA7547100BA45C7 /* SignInState.swift in Sources */,
+				39F69A201FA722C2006426CB /* UserSearchState.swift in Sources */,
 				39EC41E11F9A223300071ED1 /* AppDelegate.swift in Sources */,
 				6A63EA111F9D53A800D2D12E /* UserSearchTableViewController.swift in Sources */,
+				39F69A2D1FA7257F006426CB /* ApiClients.swift in Sources */,
+				39D5DC3F1FA8067800BA45C7 /* SignInReducer.swift in Sources */,
+				39D5DC371FA7567000BA45C7 /* Authentication.swift in Sources */,
+				39F69A2B1FA72568006426CB /* UserSearch.swift in Sources */,
+				39F69A231FA72327006426CB /* UserSearchReducer.swift in Sources */,
+				39F69A0C1FA6E6F9006426CB /* AppReducer.swift in Sources */,
+				39F69A281FA724C6006426CB /* FetchUsersAction.swift in Sources */,
+				39F69A101FA6E8F3006426CB /* RoutingState.swift in Sources */,
 				39EC41E91F9A223300071ED1 /* TheSocialNetwork.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,6 +854,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TheSocialNetwork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.proatit.TheSocialNetwork;
@@ -615,6 +875,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TheSocialNetwork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.proatit.TheSocialNetwork;
