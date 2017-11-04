@@ -10,8 +10,10 @@ import ReSwift
 
 struct RoutingState: StateType {
 	var navigationState: RoutingDestination
+	var routingType: RoutingType
 
 	init(navigationState: RoutingDestination = .signin) {
 		self.navigationState = navigationState
+		self.routingType = .push
 	}
 }

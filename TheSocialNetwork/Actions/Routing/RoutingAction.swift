@@ -10,4 +10,5 @@ import ReSwift
 
 struct RoutingAction: Action {
 	let destination: RoutingDestination
+	let routingType: RoutingType
 }

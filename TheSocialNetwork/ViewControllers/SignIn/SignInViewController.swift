@@ -32,7 +32,7 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
 			}
 		}
 
-		store.dispatch(RoutingAction(destination: .signin))
+		store.dispatch(RoutingAction(destination: .signin, routingType: .push))
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -40,7 +40,7 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
 	}
 
 	@IBAction func signInButtonPressed() {
-		store.dispatch(RoutingAction(destination: .userSearch))
+		store.dispatch(RoutingAction(destination: .userSearch, routingType: .push))
 	}
 
 	@IBAction func signInWithGoogleButtonPressed() {

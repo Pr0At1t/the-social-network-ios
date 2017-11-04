@@ -13,6 +13,11 @@ enum RoutingDestination: String {
 	case userSearch = "UserSearch"
 }
 
+enum RoutingType {
+	case push
+	case root
+}
+
 final class AppRouter {
 	let navigationController: UINavigationController
 
@@ -40,6 +45,12 @@ final class AppRouter {
 		navigationController.pushViewController(viewController, animated: animated)
 	}
 
+	fileprivate func changeRootViewController(identifier: String, animated: Bool) {
+		let viewController = instantiateViewController(identifier: identifier)
+
+		navigationController.setViewControllers([viewController], animated: animated)
+	}
+
 	private func instantiateViewController(identifier: String) -> UIViewController {
 		let storyboard = UIStoryboard(name: "Main", bundle: nil)
 		return storyboard.instantiateViewController(withIdentifier: identifier)
@@ -49,6 +60,11 @@ final class AppRouter {
 extension AppRouter: StoreSubscriber {
 	func newState(state: RoutingState) {
 		let shouldAnimate = navigationController.topViewController != nil
-		pushViewController(identifier: state.navigationState.rawValue, animated: shouldAnimate)
+		switch state.routingType {
+		case .push:
+			pushViewController(identifier: state.navigationState.rawValue, animated: shouldAnimate)
+		case .root:
+			changeRootViewController(identifier: state.navigationState.rawValue, animated: shouldAnimate)
+		}
 	}
 }
