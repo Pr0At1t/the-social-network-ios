@@ -17,6 +17,14 @@ class UserSearchTableViewController: UITableViewController {
 
     var filteredUsers = [String]()
 
+	var mockedUsers = [
+		"Atul Bipin",
+		"Pranav Jain",
+		"Ashwin Bipin",
+		"Hunter Hoffman",
+		"Steve Jobs"
+	]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         searchController.searchResultsUpdater = self
@@ -24,6 +32,9 @@ class UserSearchTableViewController: UITableViewController {
         searchController.searchBar.placeholder = "Search Users"
         navigationItem.searchController = searchController
         definesPresentationContext = true
+
+		let userCardNib = UINib(nibName: "UserCard", bundle: nil)
+		self.tableView.register(userCardNib, forCellReuseIdentifier: "user_card")
     }
 
 	override func viewWillAppear(_ animated: Bool) {
@@ -49,13 +60,13 @@ class UserSearchTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.filteredUsers.count
+        return self.mockedUsers.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
-		cell.textLabel?.text = self.filteredUsers[indexPath.row]
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "user_card", for: indexPath) as? UserCard
+		cell?.userNameLabel?.text = self.mockedUsers[indexPath.row]
+        return cell ?? UITableViewCell()
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
