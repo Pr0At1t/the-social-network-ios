@@ -11,6 +11,7 @@ import ReSwift
 enum RoutingDestination: String {
 	case signin = "SignInViewController"
 	case userSearch = "UserSearch"
+    case register = "SignUp"
 }
 
 enum RoutingType {

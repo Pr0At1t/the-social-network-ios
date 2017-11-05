@@ -40,7 +40,7 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
 	}
 
 	@IBAction func signInButtonPressed() {
-		store.dispatch(RoutingAction(destination: .userSearch, routingType: .push))
+		store.dispatch(RoutingAction(destination: .register, routingType: .push))
 	}
 
 	@IBAction func signInWithGoogleButtonPressed() {

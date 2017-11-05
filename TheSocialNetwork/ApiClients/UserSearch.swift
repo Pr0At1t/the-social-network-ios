@@ -18,7 +18,7 @@ class UserSearchClient {
 		]
 
 		return Alamofire.SessionManager.default.request(
-			ApiRoute.getUrlString(for: .userSearch),
+			ApiRoute.userSearch.getUrlString(),
 			method: .post,
 			parameters: parameters,
 			encoding: JSONEncoding.default

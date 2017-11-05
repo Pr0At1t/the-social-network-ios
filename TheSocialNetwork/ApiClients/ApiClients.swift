@@ -9,16 +9,10 @@
 enum ApiRoute: String {
 	case userSearch = "/search"
 	case googleLogin = "/googleLogin"
+    case registerUser = "/register"
 
-	private static let base = "http://10.0.0.117:5001"
-
-	static func getUrlString(for route: ApiRoute) -> String {
-		switch route {
-		case .userSearch:
-			return "\(base)\(ApiRoute.userSearch.rawValue)"
-		case .googleLogin:
-			return "\(base)\(ApiRoute.googleLogin.rawValue)"
-		}
+	func getUrlString() -> String {
+		return "\(Keys.apiBaseUrl)\(self.rawValue)"
 	}
 }
 

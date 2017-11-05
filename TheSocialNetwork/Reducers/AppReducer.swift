@@ -12,6 +12,7 @@ func appReducer(action: Action, state: AppState?) -> AppState {
 	return AppState(
 		routingState: routingReducer(action: action, state: state?.routingState),
 		userSearchState: userSearchReducer(action: action, state: state?.userSearchState),
-		signInState: signInReducer(action: action, state: state?.signInState)
+		signInState: signInReducer(action: action, state: state?.signInState),
+        signUpState: signUpReducer(action: action, state: state?.signUpState)
 	)
 }

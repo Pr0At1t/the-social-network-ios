@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +20,7 @@
         <!--SignUp-->
         <scene sceneID="irU-1j-v86">
             <objects>
-                <viewControllerPlaceholder storyboardName="SignUp" id="mrM-q8-T7Q" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="SignUp" storyboardName="SignUp" id="mrM-q8-T7Q" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z00-mq-s3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-851" y="-350"/>

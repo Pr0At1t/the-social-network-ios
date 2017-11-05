@@ -7,5 +7,5 @@
 //
 
 struct Keys {
-	static let apiBaseUrl = "http://10.0.0.117:5001"
+	static let apiBaseUrl = "http://192.168.0.34:5001"
 }

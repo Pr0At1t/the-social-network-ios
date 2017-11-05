@@ -17,7 +17,7 @@ class AuthenticationClient {
 		]
 
 		Alamofire.request(
-			ApiRoute.getUrlString(for: .googleLogin),
+			ApiRoute.googleLogin.getUrlString(),
 			method: .post,
 			parameters: parameters,
 			encoding: JSONEncoding.default
@@ -25,4 +25,35 @@ class AuthenticationClient {
 				completion(response)
 		}
 	}
+
+    public func registerUser(with userData: SignUpAction, completion: @escaping (Bool) -> Void) {
+        let parameters: [String: Any] = [
+            "email": userData.email,
+            "password": userData.password,
+            "firstname": userData.firstName,
+            "lastname": userData.lastName,
+            "dob": userData.dob,
+            "country": userData.country
+        ]
+
+        Alamofire.SessionManager.default.request(
+            ApiRoute.registerUser.getUrlString(),
+            method: .post,
+            parameters: parameters,
+            encoding: JSONEncoding.default
+            ).responseJSON { response in
+                switch response.result {
+                case .success(let data):
+                    completion(self.getRegistrationStatus(from: data))
+                case .failure(let error):
+                    print("ERROR registering User: \(String(describing: error))")
+                }
+        }
+    }
+
+    private func getRegistrationStatus(from data: Any) -> Bool {
+        // parse the data here
+        print(data)
+        return true
+    }
 }
