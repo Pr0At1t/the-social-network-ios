@@ -6,6 +6,10 @@
 //  Copyright © 2017 Pr0At1t. All rights reserved.
 //
 
+// swiftlint:disable force_cast
+
 struct Keys {
-    static let apiBaseUrl = "http://192.168.0.16:5001"
+    static let apiBaseUrl = {
+        return "http://\(Bundle.main.infoDictionary?["DevServerIP"] as! String):5001"
+    }()
 }
