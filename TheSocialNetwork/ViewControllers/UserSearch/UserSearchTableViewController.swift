@@ -17,14 +17,6 @@ class UserSearchTableViewController: UITableViewController {
 
     var filteredUsers = [String]()
 
-	var mockedUsers = [
-		"Atul Bipin",
-		"Pranav Jain",
-		"Ashwin Bipin",
-		"Hunter Hoffman",
-		"Steve Jobs"
-	]
-
     override func viewDidLoad() {
         super.viewDidLoad()
         searchController.searchResultsUpdater = self
@@ -32,9 +24,6 @@ class UserSearchTableViewController: UITableViewController {
         searchController.searchBar.placeholder = "Search Users"
         navigationItem.searchController = searchController
         definesPresentationContext = true
-
-		let userCardNib = UINib(nibName: "UserCard", bundle: nil)
-		self.tableView.register(userCardNib, forCellReuseIdentifier: "user_card")
     }
 
 	override func viewWillAppear(_ animated: Bool) {
@@ -60,12 +49,13 @@ class UserSearchTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.mockedUsers.count
+        return self.filteredUsers.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "user_card", for: indexPath) as? UserCard
-		cell?.userNameLabel?.text = self.mockedUsers[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UserCard") as? UserCard
+		cell?.nameLabel.text = self.filteredUsers[indexPath.row]
+		cell?.profileImage.layer.cornerRadius = 50
         return cell ?? UITableViewCell()
     }
 
