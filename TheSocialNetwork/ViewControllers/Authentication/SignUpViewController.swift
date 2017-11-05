@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReSwift
 
 class SignUpViewController: UIViewController {
 
@@ -17,11 +18,30 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var country: UITextField!
     @IBOutlet weak var dob: UITextField!
 
+	private var errors: [ValidationError] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+
+		store.subscribe(self) {
+			$0.select {
+				$0.signUpState
+			}
+		}
+	}
+
+	override func viewWillDisappear(_ animated: Bool) {
+		store.unsubscribe(self)
+		store.dispatch(PurgeSignUpErrorAction())
+		self.errors = []
+		super.viewWillDisappear(animated)
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -37,17 +57,17 @@ class SignUpViewController: UIViewController {
             country: country.text!, dob: dob.text!)
 
         store.dispatch(acceptUserInput(state: store.state, store: store, userData: registerAction))
-        store.dispatch(RoutingAction(destination: .userSearch, routingType: .push))
     }
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+extension SignUpViewController: StoreSubscriber {
+	func newState(state: SignUpState) {
+		if state.errorState.errors.count > 0 && state.numTries == state.errorState.numFails {
+			AlertHelper.sharedInstance.showErrorAlert(
+				with: state.errorState.errors.map { $0.message },
+				from: self
+			)
+		}
+		self.errors = state.errorState.errors
+	}
 }

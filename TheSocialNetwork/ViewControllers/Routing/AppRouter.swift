@@ -49,7 +49,9 @@ final class AppRouter {
 	fileprivate func changeRootViewController(identifier: String, animated: Bool) {
 		let viewController = instantiateViewController(identifier: identifier)
 
-		navigationController.setViewControllers([viewController], animated: animated)
+		if viewController.restorationIdentifier != navigationController.topViewController?.restorationIdentifier {
+			navigationController.setViewControllers([viewController], animated: animated)
+		}
 	}
 
 	private func instantiateViewController(identifier: String) -> UIViewController {

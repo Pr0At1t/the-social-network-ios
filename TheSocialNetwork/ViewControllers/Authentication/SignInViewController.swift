@@ -26,13 +26,18 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 
+		store.dispatch(RoutingAction(destination: .signin, routingType: .push))
+
 		store.subscribe(self) {
 			$0.select {
 				$0.signInState
 			}
 		}
+	}
 
-		store.dispatch(RoutingAction(destination: .signin, routingType: .push))
+	override func viewWillDisappear(_ animated: Bool) {
+		store.unsubscribe(self)
+		super.viewWillDisappear(animated)
 	}
 
 	override func didReceiveMemoryWarning() {

@@ -10,8 +10,14 @@ import ReSwift
 
 // Async action creator used to fetch users
 func acceptUserInput(state: AppState, store: Store<AppState>, userData: SignUpAction) -> SignUpAction {
-    ApiClients.authenticationClient.registerUser(with: userData) { (ifRegistered: Bool) in
-        store.dispatch(SignUpCompletedAction(isRegistered: ifRegistered))
+    ApiClients.authenticationClient.registerUser(with: userData) { (registrationStatus: RegistrationStatus) in
+        switch registrationStatus {
+        case .success(let ifRegistered):
+            store.dispatch(SignUpCompletedAction(isRegistered: ifRegistered))
+			store.dispatch(RoutingAction(destination: .userSearch, routingType: .push))
+        case .failure(let validationErrors):
+            store.dispatch(SignUpErrorAction(errors: validationErrors))
+        }
     }
     return userData
 }
@@ -28,3 +34,9 @@ struct SignUpAction: Action {
 struct SignUpCompletedAction: Action {
     let isRegistered: Bool
 }
+
+struct SignUpErrorAction: Action {
+	let errors: [ValidationError]
+}
+
+struct PurgeSignUpErrorAction: Action {}

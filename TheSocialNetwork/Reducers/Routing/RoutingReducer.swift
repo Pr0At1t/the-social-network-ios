@@ -9,11 +9,12 @@
 import ReSwift
 
 func routingReducer(action: Action, state: RoutingState?) -> RoutingState {
-	var state = state ?? RoutingState()
+	var state = state ?? RoutingState(routingType: .push)
 
 	switch action {
 	case let routingAction as RoutingAction:
 		state.navigationState = routingAction.destination
+		state.routingType = routingAction.routingType
 	default:
 		break
 	}

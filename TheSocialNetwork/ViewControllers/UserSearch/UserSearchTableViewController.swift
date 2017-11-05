@@ -38,8 +38,8 @@ class UserSearchTableViewController: UITableViewController {
 	}
 
 	override func viewWillDisappear(_ animated: Bool) {
-		super.viewWillDisappear(animated)
 		store.unsubscribe(self)
+		super.viewWillDisappear(animated)
 	}
 
     override func didReceiveMemoryWarning() {

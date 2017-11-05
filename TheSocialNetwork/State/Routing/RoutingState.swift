@@ -12,8 +12,8 @@ struct RoutingState: StateType {
 	var navigationState: RoutingDestination
 	var routingType: RoutingType
 
-	init(navigationState: RoutingDestination = .signin) {
+	init(navigationState: RoutingDestination = .signin, routingType: RoutingType) {
 		self.navigationState = navigationState
-		self.routingType = .push
+		self.routingType = routingType
 	}
 }
