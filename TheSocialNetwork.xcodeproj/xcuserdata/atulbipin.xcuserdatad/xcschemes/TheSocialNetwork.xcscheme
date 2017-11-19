@@ -38,6 +38,11 @@
                BlueprintName = "TheSocialNetworkTests"
                ReferencedContainer = "container:TheSocialNetwork.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "UserSearchTableViewControllerTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
          <TestableReference
             skipped = "NO">

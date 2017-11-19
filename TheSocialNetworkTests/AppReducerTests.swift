@@ -16,7 +16,7 @@ import Nimble
 class AppReducerTests: QuickSpec {
     override func spec() {
         describe("#appReducer") {
-            it("correctly initializes the app state") {
+            it("Initializes state correctly") {
                 struct DummyAction: Action {}
                 let action = DummyAction()
 
@@ -24,9 +24,9 @@ class AppReducerTests: QuickSpec {
 
                 expect(appState.userSearchState.users).to(beEmpty())
                 expect(appState.userSearchState.loading).to(beFalse())
-                expect(appState.userSearchState.currentRequest).to(beNil())
+                expect(appState.userSearchState.currentRequest ?? nil).to(beNil())
 
-                expect(appState.signInState.response).to(beNil())
+                expect(appState.signInState.response ?? nil).to(beNil())
                 expect(appState.signInState.signingIn).to(beFalse())
 
                 expect(appState.signUpState.isRegistered).to(beFalse())
