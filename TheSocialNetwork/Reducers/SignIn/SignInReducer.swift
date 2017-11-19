@@ -13,19 +13,23 @@ func signInReducer(action: Action, state: SignInState?) -> SignInState {
         response: nil,
         signingIn: false,
         signedIn: false,
-        email: ""
+        email: "",
+        errorState: SignInErrorState(errors: [])
     )
 
 	switch action {
-	case _ as GoogleSignInAction:
-		state.signingIn = true
-	case let googleSignInSuccess as GoogleSignInSuccess:
-		state.signingIn = false
-		state.response = googleSignInSuccess.response
+    case _ as GoogleSignInAction:
+        state.signingIn = true
+    case let googleSignInSuccess as GoogleSignInSuccess:
+        state.signingIn = false
+        state.response = googleSignInSuccess.response
     case let userLoginAction as SignInState:
         state.email = userLoginAction.email
         state.signingIn = true
-
+    case let signInErrorAction as SignInErrorAction:
+        state.errorState.errors = signInErrorAction.errors
+    case _ as PurgeSignInErrorAction:
+        state.errorState.errors = []
 
     // Change cookies here
 	default:

@@ -43,26 +43,34 @@ class AlertHelper {
     /**
         Show error popup with multiple messages
         - parameters:
-            - messages: An array of strings that will be shown as error messages
-            - viewController: The parent view controller that wants to show the error pop up
+        - messages: An array of strings that will be shown as error messages
+        - viewController: The parent view controller that wants to show the error pop up
     */
-	func showErrorAlert(with messages: [String], from viewController: UIViewController) {
-		showErrorAlert(with: getMessage(from: messages), from: viewController)
+    func showErrorAlert(
+        with messages: [String],
+        from viewController: UIViewController,
+        handler: ((UIAlertAction) -> Void)? = nil
+    ) {
+        showErrorAlert(with: getMessage(from: messages), from: viewController, handler: handler)
 	}
 
     /**
         Show error popup with a single message
         - parameters:
-            - messages: Error message to be shown to the user
-            - viewController: The parent view controller that wants to show the error pop up
-     */
-	func showErrorAlert(with message: String, from viewController: UIViewController) {
+        - messages: Error message to be shown to the user
+        - viewController: The parent view controller that wants to show the error pop up
+    */
+	func showErrorAlert(
+        with message: String,
+        from viewController: UIViewController,
+        handler: ((UIAlertAction) -> Void)? = nil
+    ) {
 		let alert = UIAlertController(
 			title: Title.error.rawValue,
 			message: message,
 			preferredStyle: .alert
 		)
-		alert.addAction(UIAlertAction(title: Title.okay.rawValue, style: .default, handler: nil))
+		alert.addAction(UIAlertAction(title: Title.okay.rawValue, style: .default, handler: handler))
 		viewController.present(alert, animated: true, completion: nil)
 	}
 }

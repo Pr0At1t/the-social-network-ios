@@ -10,6 +10,7 @@ public enum ApiRoute: String {
 	case userSearch = "/search"
 	case googleLogin = "/googleLogin"
     case registerUser = "/register"
+    case loginUser = "/login"
 
 	public func getUrlString() -> String {
 		return "\(Keys.apiBaseUrl)\(self.rawValue)"

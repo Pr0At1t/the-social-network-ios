@@ -13,5 +13,11 @@ struct SignInState: StateType {
 	var signingIn: Bool
     var signedIn: Bool
     var email: String
+    var errorState: SignInErrorState
 //    var cookies: Any?
+}
+
+struct SignInErrorState: StateType {
+    var errors: [SignInValidationError]
+
 }

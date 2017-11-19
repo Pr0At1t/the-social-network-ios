@@ -62,7 +62,7 @@ class SignUpViewController: UIViewController {
 
 extension SignUpViewController: StoreSubscriber {
 	func newState(state: SignUpState) {
-		if state.errorState.errors.count > 0 && state.numTries == state.errorState.numFails {
+		if state.errorState.errors.count > 0 {
 			AlertHelper.sharedInstance.showErrorAlert(
 				with: state.errorState.errors.map { $0.message },
 				from: self

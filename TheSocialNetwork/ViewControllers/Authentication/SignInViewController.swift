@@ -16,6 +16,8 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var emailLogin: UITextField!
     @IBOutlet weak var passwordLogin: SignInTextField!
 
+    private var errors: [SignInValidationError] = []
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
@@ -54,7 +56,7 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
             email: emailLogin.text!,
             password: passwordLogin.text!
         )
-        store.dispatch(authenticateManualSignIn(state: store.state, store: store, userCredentials: signInAction))
+        store.dispatch(authenticateManualSignIn(userCredentials: signInAction))
 
         self.appDelegate?.appRouter?.pushViewController(identifier: RoutingDestination.userSearch.rawValue)
 
@@ -83,6 +85,14 @@ extension SignInViewController: GIDSignInDelegate {
 
 extension SignInViewController: StoreSubscriber {
 	func newState(state: SignInState) {
-		print("Google SIGN IN RESPONSE")
+        if state.errorState.errors.count > 0 {
+            AlertHelper.sharedInstance.showErrorAlert(
+                with: state.errorState.errors.map { $0.message },
+                from: self
+            ) { _ in
+                store.dispatch(PurgeSignInErrorAction())
+            }
+        }
+        self.errors = state.errorState.errors
 	}
 }

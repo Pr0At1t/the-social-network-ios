@@ -74,10 +74,24 @@ open class AuthenticationClient {
             "password": userData.password
         ]
 
-        // Alamofire request
+        Alamofire.SessionManager.default.request(
+            ApiRoute.loginUser.getUrlString(),
+            method: .post,
+            parameters: parameters,
+            encoding: JSONEncoding.default
+            ).responseJSON { response in
+                switch response.result {
+                case .success(let data):
+                    completion(self.getLoginStatus(from: data))
+                case .failure(let error):
+                    print("ERROR registering User: \(String(describing: error))")
+                }
+        }
     }
 
-    public func registerUser(with userData: SignUpAction, completion: @escaping (AuthenticationStatus<SignUpValidationError>) -> Void) {
+    public func registerUser(
+        with userData: SignUpAction,
+        completion: @escaping (AuthenticationStatus<SignUpValidationError>) -> Void) {
         let parameters: [String: Any] = [
             "email": userData.email,
             "password": userData.password,
@@ -107,11 +121,20 @@ open class AuthenticationClient {
         if isRegistered {
             return .success(status: isRegistered)
         } else {
-            return .failure(errors: getErrorsFromData(from: data))
+            return .failure(errors: getErrorsFromSignup(from: data))
         }
     }
 
-    private func getErrorsFromData(from data: Any) -> [SignUpValidationError] {
+    private func getLoginStatus(from data: Any) -> AuthenticationStatus<SignInValidationError> {
+        let isLoggedIn = data as? Bool ?? false
+        if isLoggedIn {
+            return .success(status: isLoggedIn)
+        } else {
+            return .failure(errors: getErrorsFromSignin(from: data))
+        }
+    }
+
+    private func getErrorsFromSignup(from data: Any) -> [SignUpValidationError] {
         let json = JSON(data)
         if let validationErrors = json.array {
             return validationErrors.flatMap({(validationData: JSON) -> SignUpValidationError? in
@@ -133,4 +156,24 @@ open class AuthenticationClient {
 
         return []
     }
+
+    private func getErrorsFromSignin(from data: Any) -> [SignInValidationError] {
+        let json = JSON(data)
+        print(json)
+        if let validationErrors = json.array {
+            return validationErrors.flatMap({(validationData: JSON) -> SignInValidationError? in
+                if let errMsg = validationData["msg"].string,
+                    let param = validationData["param"].string {
+                    switch param {
+                    case "email": return .email(message: errMsg)
+                    case "password": return .password(message: errMsg)
+                    default: return nil
+                    }
+                }
+            return nil
+        })
+    }
+//        print(validationErrors)/
+        return []
+ }
 }

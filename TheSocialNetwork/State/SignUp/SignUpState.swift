@@ -11,10 +11,8 @@ import ReSwift
 struct SignUpState: StateType {
     var isRegistered: Bool
     var errorState: SignUpErrorState
-	var numTries: Int
 }
 
 struct SignUpErrorState: StateType {
 	var errors: [SignUpValidationError]
-	var numFails: Int
 }
