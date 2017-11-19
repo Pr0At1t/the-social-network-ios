@@ -18,7 +18,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var country: UITextField!
     @IBOutlet weak var dob: UITextField!
 
-	private var errors: [ValidationError] = []
+	private var errors: [SignUpValidationError] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()

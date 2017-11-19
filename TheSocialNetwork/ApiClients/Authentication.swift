@@ -9,12 +9,12 @@
 import Alamofire
 import SwiftyJSON
 
-public enum RegistrationStatus {
+public enum AuthenticationStatus<T> {
     case success(status: Bool)
-    case failure(errors: [ValidationError])
+    case failure(errors: [T])
 }
 
-public enum ValidationError {
+public enum SignUpValidationError {
     case email(message: String)
     case password(message: String)
     case firstName(message: String)
@@ -32,6 +32,18 @@ public enum ValidationError {
 		case .dob(let value): return value
 		}
 	}
+}
+
+public enum SignInValidationError {
+    case email(message: String)
+    case password(message: String)
+
+    var message: String {
+        switch self {
+        case .email(let value): return value
+        case .password(let value): return value
+        }
+    }
 }
 
 open class AuthenticationClient {
@@ -53,7 +65,19 @@ open class AuthenticationClient {
 		}
 	}
 
-    public func registerUser(with userData: SignUpAction, completion: @escaping (RegistrationStatus) -> Void) {
+    public func signInUser(
+        with userData: SignInAction,
+        completion: @escaping (AuthenticationStatus<SignInValidationError>) -> Void
+    ) {
+        let parameters: [String: Any] = [
+            "email": userData.email,
+            "password": userData.password
+        ]
+
+        // Alamofire request
+    }
+
+    public func registerUser(with userData: SignUpAction, completion: @escaping (AuthenticationStatus<SignUpValidationError>) -> Void) {
         let parameters: [String: Any] = [
             "email": userData.email,
             "password": userData.password,
@@ -78,7 +102,7 @@ open class AuthenticationClient {
         }
     }
 
-    private func getRegistrationStatus(from data: Any) -> RegistrationStatus {
+    private func getRegistrationStatus(from data: Any) -> AuthenticationStatus<SignUpValidationError> {
         let isRegistered = data as? Bool ?? false
         if isRegistered {
             return .success(status: isRegistered)
@@ -87,10 +111,10 @@ open class AuthenticationClient {
         }
     }
 
-    private func getErrorsFromData(from data: Any) -> [ValidationError] {
+    private func getErrorsFromData(from data: Any) -> [SignUpValidationError] {
         let json = JSON(data)
         if let validationErrors = json.array {
-            return validationErrors.flatMap({(validationData: JSON) -> ValidationError? in
+            return validationErrors.flatMap({(validationData: JSON) -> SignUpValidationError? in
                 if let errMsg = validationData["msg"].string,
                     let param = validationData["param"].string {
                     switch param {

@@ -46,6 +46,7 @@
 		68EE3AE676979AC7FAB6BDB0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D140A40CB79D835BA2DAC11F /* CoreMedia.framework */; };
 		6A63EA0B1F9D4BB800D2D12E /* UserSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A63EA0A1F9D4BB800D2D12E /* UserSearch.storyboard */; };
 		6A63EA111F9D53A800D2D12E /* UserSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A63EA101F9D53A800D2D12E /* UserSearchTableViewController.swift */; };
+		6A8945821FB3D58A0015C014 /* SignInAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8945811FB3D58A0015C014 /* SignInAction.swift */; };
 		6A9FF2201F9C59C400E36B14 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9FF21F1F9C59C400E36B14 /* SignUp.storyboard */; };
 		6AED346A1FAC255200CF3B0E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AED34691FAC255200CF3B0E /* SignUpViewController.swift */; };
 		6AED346F1FAC2CD800CF3B0E /* SignUpState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AED346E1FAC2CD800CF3B0E /* SignUpState.swift */; };
@@ -122,6 +123,7 @@
 		60E7E9C10653A1156C99E7A0 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		6A63EA0A1F9D4BB800D2D12E /* UserSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserSearch.storyboard; sourceTree = "<group>"; };
 		6A63EA101F9D53A800D2D12E /* UserSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchTableViewController.swift; sourceTree = "<group>"; };
+		6A8945811FB3D58A0015C014 /* SignInAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAction.swift; sourceTree = "<group>"; };
 		6A9FF21F1F9C59C400E36B14 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		6AED34691FAC255200CF3B0E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6AED346E1FAC2CD800CF3B0E /* SignUpState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpState.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 			children = (
 				39D5DC391FA7F39A00BA45C7 /* GoogleSignInAction.swift */,
 				39D5DC3B1FA804D500BA45C7 /* GoogleSignInSuccess.swift */,
+				6A8945811FB3D58A0015C014 /* SignInAction.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -792,6 +795,7 @@
 				39D5DC351FA7547100BA45C7 /* SignInState.swift in Sources */,
 				39F69A201FA722C2006426CB /* UserSearchState.swift in Sources */,
 				39EC41E11F9A223300071ED1 /* AppDelegate.swift in Sources */,
+				6A8945821FB3D58A0015C014 /* SignInAction.swift in Sources */,
 				6A63EA111F9D53A800D2D12E /* UserSearchTableViewController.swift in Sources */,
 				39F69A2D1FA7257F006426CB /* ApiClients.swift in Sources */,
 				39D5DC3F1FA8067800BA45C7 /* SignInReducer.swift in Sources */,

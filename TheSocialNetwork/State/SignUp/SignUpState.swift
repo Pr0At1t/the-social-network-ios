@@ -15,6 +15,6 @@ struct SignUpState: StateType {
 }
 
 struct SignUpErrorState: StateType {
-	var errors: [ValidationError]
+	var errors: [SignUpValidationError]
 	var numFails: Int
 }

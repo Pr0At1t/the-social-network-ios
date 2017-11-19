@@ -11,8 +11,8 @@ import ReSwift
 // Async action creator used to fetch users
 func acceptUserInput(userData: SignUpAction) -> (AppState, Store<AppState>) -> SignUpAction {
     return { state, store in
-        ApiClients().authenticationClient.registerUser(with: userData) { (registrationStatus: RegistrationStatus) in
-            switch registrationStatus {
+        ApiClients().authenticationClient.registerUser(with: userData) { (authenticationStatus: AuthenticationStatus<SignUpValidationError>) in
+            switch authenticationStatus {
             case .success(let ifRegistered):
                 store.dispatch(SignUpCompletedAction(isRegistered: ifRegistered))
             case .failure(let validationErrors):
@@ -37,7 +37,7 @@ struct SignUpCompletedAction: Action {
 }
 
 struct SignUpErrorAction: Action {
-	let errors: [ValidationError]
+	let errors: [SignUpValidationError]
 }
 
 struct PurgeSignUpErrorAction: Action {}

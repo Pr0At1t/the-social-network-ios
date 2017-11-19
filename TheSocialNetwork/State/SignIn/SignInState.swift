@@ -11,4 +11,7 @@ import ReSwift
 struct SignInState: StateType {
 	var response: Any?
 	var signingIn: Bool
+    var signedIn: Bool
+    var email: String
+//    var cookies: Any?
 }

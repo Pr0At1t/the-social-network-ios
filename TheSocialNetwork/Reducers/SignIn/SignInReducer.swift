@@ -9,7 +9,12 @@
 import ReSwift
 
 func signInReducer(action: Action, state: SignInState?) -> SignInState {
-	var state = state ?? SignInState(response: nil, signingIn: false)
+    var state = state ?? SignInState(
+        response: nil,
+        signingIn: false,
+        signedIn: false,
+        email: ""
+    )
 
 	switch action {
 	case _ as GoogleSignInAction:
@@ -17,6 +22,12 @@ func signInReducer(action: Action, state: SignInState?) -> SignInState {
 	case let googleSignInSuccess as GoogleSignInSuccess:
 		state.signingIn = false
 		state.response = googleSignInSuccess.response
+    case let userLoginAction as SignInState:
+        state.email = userLoginAction.email
+        state.signingIn = true
+
+
+    // Change cookies here
 	default:
 		break
 	}

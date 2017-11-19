@@ -189,6 +189,10 @@
                         <viewLayoutGuide key="safeArea" id="gUb-J1-x6q"/>
                     </view>
                     <navigationItem key="navigationItem" id="yFO-7D-aCO"/>
+                    <connections>
+                        <outlet property="emailLogin" destination="hiz-Cx-fea" id="bnW-ZJ-rza"/>
+                        <outlet property="passwordLogin" destination="KxW-Db-B6U" id="AH6-SY-DH0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

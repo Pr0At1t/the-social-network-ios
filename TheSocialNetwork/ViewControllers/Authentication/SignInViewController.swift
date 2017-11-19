@@ -13,6 +13,8 @@ import GGLSignIn
 
 class SignInViewController: UIViewController, GIDSignInUIDelegate {
     private weak var appDelegate = UIApplication.shared.delegate as? AppDelegate
+    @IBOutlet weak var emailLogin: UITextField!
+    @IBOutlet weak var passwordLogin: SignInTextField!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -47,7 +49,15 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
 	}
 
 	@IBAction func signInButtonPressed() {
+
+        let signInAction = SignInAction(
+            email: emailLogin.text!,
+            password: passwordLogin.text!
+        )
+        store.dispatch(authenticateManualSignIn(state: store.state, store: store, userCredentials: signInAction))
+
         self.appDelegate?.appRouter?.pushViewController(identifier: RoutingDestination.userSearch.rawValue)
+
 	}
 
 	@IBAction func signInWithGoogleButtonPressed() {
