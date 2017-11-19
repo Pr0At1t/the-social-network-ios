@@ -9,17 +9,19 @@
 import ReSwift
 
 // Async action creator used to fetch users
-func acceptUserInput(state: AppState, store: Store<AppState>, userData: SignUpAction) -> SignUpAction {
-    ApiClients.authenticationClient.registerUser(with: userData) { (registrationStatus: RegistrationStatus) in
-        switch registrationStatus {
-        case .success(let ifRegistered):
-            store.dispatch(SignUpCompletedAction(isRegistered: ifRegistered))
-			store.dispatch(RoutingAction(destination: .userSearch, routingType: .push))
-        case .failure(let validationErrors):
-            store.dispatch(SignUpErrorAction(errors: validationErrors))
+func acceptUserInput(userData: SignUpAction) -> (AppState, Store<AppState>) -> SignUpAction {
+    return { state, store in
+        ApiClients.authenticationClient.registerUser(with: userData) { (registrationStatus: RegistrationStatus) in
+            switch registrationStatus {
+            case .success(let ifRegistered):
+                store.dispatch(SignUpCompletedAction(isRegistered: ifRegistered))
+                store.dispatch(RoutingAction(destination: .userSearch, routingType: .push))
+            case .failure(let validationErrors):
+                store.dispatch(SignUpErrorAction(errors: validationErrors))
+            }
         }
+        return userData
     }
-    return userData
 }
 
 struct SignUpAction: Action {

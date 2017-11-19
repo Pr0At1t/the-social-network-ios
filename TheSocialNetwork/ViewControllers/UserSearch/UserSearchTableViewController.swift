@@ -34,7 +34,7 @@ class UserSearchTableViewController: UITableViewController {
 			}
 		}
 
-		store.dispatch(fetchUsers(state: store.state, store: store, searchString: searchController.searchBar.text ?? ""))
+        store.dispatch(fetchUsers(searchString: searchController.searchBar.text ?? ""))
 	}
 
 	override func viewWillDisappear(_ animated: Bool) {
@@ -66,7 +66,7 @@ class UserSearchTableViewController: UITableViewController {
 extension UserSearchTableViewController: UISearchResultsUpdating {
 	// MARK: - UISearchResultsUpdating Delegate
 	func updateSearchResults(for searchController: UISearchController) {
-		store.dispatch(fetchUsers(state: store.state, store: store, searchString: searchController.searchBar.text ?? ""))
+        store.dispatch(fetchUsers(searchString: searchController.searchBar.text ?? ""))
 	}
 }
 

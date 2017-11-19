@@ -56,7 +56,7 @@ class SignUpViewController: UIViewController {
             lastName: lastnameField.text!,
             country: country.text!, dob: dob.text!)
 
-        store.dispatch(acceptUserInput(state: store.state, store: store, userData: registerAction))
+        store.dispatch(acceptUserInput(userData: registerAction))
     }
 }
 

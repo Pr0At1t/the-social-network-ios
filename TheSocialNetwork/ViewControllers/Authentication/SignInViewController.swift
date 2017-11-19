@@ -45,7 +45,7 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
 	}
 
 	@IBAction func signInButtonPressed() {
-		store.dispatch(RoutingAction(destination: .register, routingType: .push))
+		store.dispatch(RoutingAction(destination: .userSearch, routingType: .push))
 	}
 
 	@IBAction func signInWithGoogleButtonPressed() {
@@ -60,7 +60,7 @@ extension SignInViewController: GIDSignInDelegate {
 			return
 		}
 
-		store.dispatch(googleSignIn(state: store.state, store: store, idToken: user.authentication.idToken))
+		store.dispatch(googleSignIn(idToken: user.authentication.idToken))
 	}
 
 	func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {

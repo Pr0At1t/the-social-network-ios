@@ -10,12 +10,14 @@ import ReSwift
 import Alamofire
 
 // Async action creator used to fetch users
-func fetchUsers(state: AppState, store: Store<AppState>, searchString: String) -> FetchUsersAction {
-	let request = ApiClients.userSearchClient.searchForUser(with: searchString) { (users: [String]) in
-		store.dispatch(LoadUsersAction(users: users))
-	}
+func fetchUsers(searchString: String) -> (AppState, Store<AppState>) -> FetchUsersAction {
+    return { state, store in
+        let request = ApiClients.userSearchClient.searchForUser(with: searchString) { (users: [String]) in
+            store.dispatch(LoadUsersAction(users: users))
+        }
 
-	return FetchUsersAction(currentRequest: request)
+        return FetchUsersAction(currentRequest: request)
+    }
 }
 
 struct FetchUsersAction: Action {
