@@ -15,7 +15,6 @@ func acceptUserInput(userData: SignUpAction) -> (AppState, Store<AppState>) -> S
             switch registrationStatus {
             case .success(let ifRegistered):
                 store.dispatch(SignUpCompletedAction(isRegistered: ifRegistered))
-                store.dispatch(RoutingAction(destination: .userSearch, routingType: .push))
             case .failure(let validationErrors):
                 store.dispatch(SignUpErrorAction(errors: validationErrors))
             }

@@ -9,7 +9,6 @@
 import ReSwift
 
 struct AppState: StateType {
-	let routingState: RoutingState
 	let userSearchState: UserSearchState
 	let signInState: SignInState
     let signUpState: SignUpState

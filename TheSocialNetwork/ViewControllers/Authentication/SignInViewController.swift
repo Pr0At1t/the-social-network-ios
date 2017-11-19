@@ -10,6 +10,8 @@ import UIKit
 import ReSwift
 
 class SignInViewController: UIViewController, GIDSignInUIDelegate {
+    private weak var appDelegate = UIApplication.shared.delegate as? AppDelegate
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
@@ -25,8 +27,6 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-
-		store.dispatch(RoutingAction(destination: .signin, routingType: .push))
 
 		store.subscribe(self) {
 			$0.select {
@@ -45,7 +45,7 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
 	}
 
 	@IBAction func signInButtonPressed() {
-		store.dispatch(RoutingAction(destination: .userSearch, routingType: .push))
+        self.appDelegate?.appRouter?.pushViewController(identifier: RoutingDestination.userSearch.rawValue)
 	}
 
 	@IBAction func signInWithGoogleButtonPressed() {
