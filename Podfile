@@ -10,4 +10,14 @@ target 'TheSocialNetwork' do
     pod 'Google/SignIn'
     pod 'Alamofire'
     pod 'SwiftyJSON'
+
+    def test_pods
+        pod 'Quick'
+        pod 'Nimble'
+    end
+
+    target 'TheSocialNetworkTests' do
+        inherit! :search_paths
+        test_pods
+    end
 end

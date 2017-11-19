@@ -8,6 +8,8 @@
 
 import UIKit
 import ReSwift
+import GoogleSignIn
+import GGLSignIn
 
 class SignInViewController: UIViewController, GIDSignInUIDelegate {
     private weak var appDelegate = UIApplication.shared.delegate as? AppDelegate

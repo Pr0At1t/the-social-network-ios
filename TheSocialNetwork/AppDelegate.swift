@@ -10,6 +10,7 @@ import ReSwift
 import UIKit
 import CoreData
 import Alamofire
+import GoogleSignIn
 
 var store = Store<AppState>(reducer: appReducer, state: nil)
 
