@@ -31,7 +31,7 @@ public class FakeStore: Store<AppState> {
     var subscribeWasCalled = false
     var dispatchWasCalledTimes = 0
     var unsubscribeWasCalled = false
-    var currentAction: Action? = nil
+    var currentAction: Action?
 
     struct DummyAction: Action {}
 
@@ -60,7 +60,7 @@ public class FakeStore: Store<AppState> {
         _ subscriber: S,
         transform: ((Subscription<AppState>) -> Subscription<SelectedState>)?)
         where SelectedState == S.StoreSubscriberStateType,
-        S : StoreSubscriber {
+        S: StoreSubscriber {
             self.subscribeWasCalled = true
     }
 

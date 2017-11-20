@@ -6,8 +6,6 @@
 //  Copyright © 2017 Pr0At1t. All rights reserved.
 //
 
-// swiftlint:disable force_cast
-
 import Quick
 import Nimble
 
