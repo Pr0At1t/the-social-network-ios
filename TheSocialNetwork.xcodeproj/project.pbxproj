@@ -15,6 +15,9 @@
 		39B6DC591F9CFE76005526ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39B6DC571F9CFE2D005526ED /* GoogleService-Info.plist */; };
 		39B6DC5A1F9CFE77005526ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39B6DC571F9CFE2D005526ED /* GoogleService-Info.plist */; };
 		39B6DC5E1FA68CA4005526ED /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B6DC5D1FA68CA4005526ED /* Keys.swift */; };
+		39B9DBBF1FC2779B004F1D53 /* FakeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9DBBE1FC2779B004F1D53 /* FakeStore.swift */; };
+		39B9DBC11FC2816F004F1D53 /* FetchUsersActionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9DBC01FC2816F004F1D53 /* FetchUsersActionTests.swift */; };
+		39B9DBC41FC281B6004F1D53 /* FakeApiClients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9DBC31FC281B6004F1D53 /* FakeApiClients.swift */; };
 		39D5DC351FA7547100BA45C7 /* SignInState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5DC341FA7547100BA45C7 /* SignInState.swift */; };
 		39D5DC371FA7567000BA45C7 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5DC361FA7567000BA45C7 /* Authentication.swift */; };
 		39D5DC3A1FA7F39A00BA45C7 /* GoogleSignInAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5DC391FA7F39A00BA45C7 /* GoogleSignInAction.swift */; };
@@ -28,6 +31,7 @@
 		39EC41EE1F9A223300071ED1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39EC41EC1F9A223300071ED1 /* LaunchScreen.storyboard */; };
 		39EC42041F9A223300071ED1 /* TheSocialNetworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC42031F9A223300071ED1 /* TheSocialNetworkUITests.swift */; };
 		39EE78251FC21D64001B0763 /* AppReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EE78241FC21D64001B0763 /* AppReducerTests.swift */; };
+		39EE78291FC2571F001B0763 /* UserSearchTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EE78281FC2571F001B0763 /* UserSearchTableViewControllerTests.swift */; };
 		39F69A0A1FA6E60E006426CB /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F69A091FA6E60E006426CB /* AppState.swift */; };
 		39F69A0C1FA6E6F9006426CB /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F69A0B1FA6E6F9006426CB /* AppReducer.swift */; };
 		39F69A0E1FA6E89F006426CB /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F69A0D1FA6E89F006426CB /* AppRouter.swift */; };
@@ -81,6 +85,9 @@
 		39B6DC571F9CFE2D005526ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		39B6DC5C1F9D0206005526ED /* TheSocialNetwork-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TheSocialNetwork-Bridging-Header.h"; sourceTree = "<group>"; };
 		39B6DC5D1FA68CA4005526ED /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		39B9DBBE1FC2779B004F1D53 /* FakeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeStore.swift; sourceTree = "<group>"; };
+		39B9DBC01FC2816F004F1D53 /* FetchUsersActionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUsersActionTests.swift; sourceTree = "<group>"; };
+		39B9DBC31FC281B6004F1D53 /* FakeApiClients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeApiClients.swift; sourceTree = "<group>"; };
 		39D5DC341FA7547100BA45C7 /* SignInState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInState.swift; sourceTree = "<group>"; };
 		39D5DC361FA7567000BA45C7 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		39D5DC391FA7F39A00BA45C7 /* GoogleSignInAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInAction.swift; sourceTree = "<group>"; };
@@ -100,6 +107,7 @@
 		39EC42031F9A223300071ED1 /* TheSocialNetworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheSocialNetworkUITests.swift; sourceTree = "<group>"; };
 		39EC42051F9A223300071ED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39EE78241FC21D64001B0763 /* AppReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducerTests.swift; sourceTree = "<group>"; };
+		39EE78281FC2571F001B0763 /* UserSearchTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchTableViewControllerTests.swift; sourceTree = "<group>"; };
 		39F69A091FA6E60E006426CB /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		39F69A0B1FA6E6F9006426CB /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		39F69A0D1FA6E89F006426CB /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
@@ -202,6 +210,15 @@
 				6AED34691FAC255200CF3B0E /* SignUpViewController.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		39B9DBC21FC2819F004F1D53 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				39B9DBBE1FC2779B004F1D53 /* FakeStore.swift */,
+				39B9DBC31FC281B6004F1D53 /* FakeApiClients.swift */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 		39D5DC2C1FA7518B00BA45C7 /* UserSearch */ = {
@@ -319,8 +336,11 @@
 		39EC41F71F9A223300071ED1 /* TheSocialNetworkTests */ = {
 			isa = PBXGroup;
 			children = (
+				39B9DBC21FC2819F004F1D53 /* Stubs */,
 				39EC41FA1F9A223300071ED1 /* Info.plist */,
 				39EE78241FC21D64001B0763 /* AppReducerTests.swift */,
+				39EE78281FC2571F001B0763 /* UserSearchTableViewControllerTests.swift */,
+				39B9DBC01FC2816F004F1D53 /* FetchUsersActionTests.swift */,
 			);
 			path = TheSocialNetworkTests;
 			sourceTree = "<group>";
@@ -788,7 +808,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39B9DBC41FC281B6004F1D53 /* FakeApiClients.swift in Sources */,
+				39B9DBBF1FC2779B004F1D53 /* FakeStore.swift in Sources */,
+				39EE78291FC2571F001B0763 /* UserSearchTableViewControllerTests.swift in Sources */,
 				39EE78251FC21D64001B0763 /* AppReducerTests.swift in Sources */,
+				39B9DBC11FC2816F004F1D53 /* FetchUsersActionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

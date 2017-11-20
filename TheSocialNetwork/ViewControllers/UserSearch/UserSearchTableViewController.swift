@@ -17,6 +17,13 @@ class UserSearchTableViewController: UITableViewController {
 
     var filteredUsers = [String]()
 
+    private var myStore: Store<AppState> = store
+
+    convenience init(store: Store<AppState>) {
+        self.init()
+        self.myStore = store
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         searchController.searchResultsUpdater = self
@@ -28,23 +35,19 @@ class UserSearchTableViewController: UITableViewController {
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		store.subscribe(self) {
+		self.myStore.subscribe(self) {
 			$0.select {
 				$0.userSearchState
 			}
 		}
 
-        store.dispatch(fetchUsers(searchString: searchController.searchBar.text ?? ""))
+        self.myStore.dispatch(fetchUsers(searchController.searchBar.text ?? ""))
 	}
 
 	override func viewWillDisappear(_ animated: Bool) {
-		store.unsubscribe(self)
+		self.myStore.unsubscribe(self)
 		super.viewWillDisappear(animated)
 	}
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 
     // MARK: - Table view data source
 
@@ -66,7 +69,7 @@ class UserSearchTableViewController: UITableViewController {
 extension UserSearchTableViewController: UISearchResultsUpdating {
 	// MARK: - UISearchResultsUpdating Delegate
 	func updateSearchResults(for searchController: UISearchController) {
-        store.dispatch(fetchUsers(searchString: searchController.searchBar.text ?? ""))
+        self.myStore.dispatch(fetchUsers(searchController.searchBar.text ?? ""))
 	}
 }
 

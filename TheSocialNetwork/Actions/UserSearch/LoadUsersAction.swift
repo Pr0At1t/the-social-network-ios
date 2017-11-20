@@ -8,6 +8,6 @@
 
 import ReSwift
 
-struct LoadUsersAction: Action {
+public struct LoadUsersAction: Action {
 	let users: [String]
 }

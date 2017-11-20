@@ -9,10 +9,10 @@
 import Alamofire
 import SwiftyJSON
 
-class UserSearchClient {
+open class UserSearchClient {
 	init() {}
 
-	public func searchForUser(with searchString: String, completion: @escaping ([String]) -> Void) -> DataRequest {
+	public func searchForUser(with searchString: String, completion: @escaping ([String]) -> Void) -> DataRequest? {
 		let parameters: [String: Any] = [
 			"searchText": searchString
 		]
