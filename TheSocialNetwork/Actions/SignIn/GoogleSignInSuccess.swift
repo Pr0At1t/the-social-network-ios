@@ -9,5 +9,6 @@
 import ReSwift
 
 struct GoogleSignInSuccess: Action {
-	let response: Any
+    let email: String
+    let token: String
 }

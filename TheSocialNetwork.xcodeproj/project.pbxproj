@@ -18,6 +18,9 @@
 		39B9DBBF1FC2779B004F1D53 /* FakeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9DBBE1FC2779B004F1D53 /* FakeStore.swift */; };
 		39B9DBC11FC2816F004F1D53 /* FetchUsersActionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9DBC01FC2816F004F1D53 /* FetchUsersActionTests.swift */; };
 		39B9DBC41FC281B6004F1D53 /* FakeApiClients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9DBC31FC281B6004F1D53 /* FakeApiClients.swift */; };
+		39B9DBC71FC4122B004F1D53 /* GoogleSignInReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9DBC61FC4122B004F1D53 /* GoogleSignInReducer.swift */; };
+		39B9DBC91FC412E5004F1D53 /* GoogleSignInState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9DBC81FC412E5004F1D53 /* GoogleSignInState.swift */; };
+		39B9DBCB1FC41747004F1D53 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9DBCA1FC41747004F1D53 /* StringUtils.swift */; };
 		39D5DC351FA7547100BA45C7 /* SignInState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5DC341FA7547100BA45C7 /* SignInState.swift */; };
 		39D5DC371FA7567000BA45C7 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5DC361FA7567000BA45C7 /* Authentication.swift */; };
 		39D5DC3A1FA7F39A00BA45C7 /* GoogleSignInAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5DC391FA7F39A00BA45C7 /* GoogleSignInAction.swift */; };
@@ -88,6 +91,9 @@
 		39B9DBBE1FC2779B004F1D53 /* FakeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeStore.swift; sourceTree = "<group>"; };
 		39B9DBC01FC2816F004F1D53 /* FetchUsersActionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUsersActionTests.swift; sourceTree = "<group>"; };
 		39B9DBC31FC281B6004F1D53 /* FakeApiClients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeApiClients.swift; sourceTree = "<group>"; };
+		39B9DBC61FC4122B004F1D53 /* GoogleSignInReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInReducer.swift; sourceTree = "<group>"; };
+		39B9DBC81FC412E5004F1D53 /* GoogleSignInState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInState.swift; sourceTree = "<group>"; };
+		39B9DBCA1FC41747004F1D53 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		39D5DC341FA7547100BA45C7 /* SignInState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInState.swift; sourceTree = "<group>"; };
 		39D5DC361FA7567000BA45C7 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		39D5DC391FA7F39A00BA45C7 /* GoogleSignInAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInAction.swift; sourceTree = "<group>"; };
@@ -180,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				391332EC1FAF1B62000AABFA /* AlertHelper.swift */,
+				39B9DBCA1FC41747004F1D53 /* StringUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -267,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				39D5DC341FA7547100BA45C7 /* SignInState.swift */,
+				39B9DBC81FC412E5004F1D53 /* GoogleSignInState.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -284,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				39D5DC3E1FA8067800BA45C7 /* SignInReducer.swift */,
+				39B9DBC61FC4122B004F1D53 /* GoogleSignInReducer.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -787,7 +796,9 @@
 				39F69A0A1FA6E60E006426CB /* AppState.swift in Sources */,
 				398259F31F9A3391004ED28B /* Colors.swift in Sources */,
 				398259F01F9A3067004ED28B /* SignInTextField.swift in Sources */,
+				39B9DBC91FC412E5004F1D53 /* GoogleSignInState.swift in Sources */,
 				39D5DC3A1FA7F39A00BA45C7 /* GoogleSignInAction.swift in Sources */,
+				39B9DBCB1FC41747004F1D53 /* StringUtils.swift in Sources */,
 				39F69A0E1FA6E89F006426CB /* AppRouter.swift in Sources */,
 				39D5DC351FA7547100BA45C7 /* SignInState.swift in Sources */,
 				39F69A201FA722C2006426CB /* UserSearchState.swift in Sources */,
@@ -795,6 +806,7 @@
 				6A63EA111F9D53A800D2D12E /* UserSearchTableViewController.swift in Sources */,
 				39F69A2D1FA7257F006426CB /* ApiClients.swift in Sources */,
 				39D5DC3F1FA8067800BA45C7 /* SignInReducer.swift in Sources */,
+				39B9DBC71FC4122B004F1D53 /* GoogleSignInReducer.swift in Sources */,
 				39D5DC371FA7567000BA45C7 /* Authentication.swift in Sources */,
 				39F69A2B1FA72568006426CB /* UserSearch.swift in Sources */,
 				39F69A231FA72327006426CB /* UserSearchReducer.swift in Sources */,

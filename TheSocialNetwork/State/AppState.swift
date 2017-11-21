@@ -12,4 +12,14 @@ public struct AppState: StateType {
 	let userSearchState: UserSearchState
 	let signInState: SignInState
     let signUpState: SignUpState
+    let googleSignInState: GoogleSignInState
+}
+
+extension AppState: CustomStringConvertible {
+    public var description: String {
+        return """
+        appState:
+            \(googleSignInState)
+        """
+    }
 }
