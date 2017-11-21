@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	// This method is for running oauth in all devices iOS 9 and up
 
-	func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+	func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
 		return GIDSignIn.sharedInstance().handle(
 			url,
 			sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
