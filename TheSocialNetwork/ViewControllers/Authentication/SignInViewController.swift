@@ -9,7 +9,6 @@
 import UIKit
 import ReSwift
 import GoogleSignIn
-import GGLSignIn
 
 class SignInViewController: UIViewController, GIDSignInUIDelegate {
     private weak var appDelegate = UIApplication.shared.delegate as? AppDelegate
@@ -17,10 +16,19 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		// Initialize sign-in
-		var configureError: NSError?
-		GGLContext.sharedInstance().configureWithError(&configureError)
-		assert(configureError == nil, "Error configuring Google services: \(String(describing: configureError))")
+        var myClientId: String = ""
+        if let fileUrl = Bundle.main.url(forResource: "GoogleService-Info", withExtension: "plist"),
+            let data = try? Data(contentsOf: fileUrl) {
+            if let result = try? PropertyListSerialization.propertyList(
+                from: data,
+                options: [],
+                format: nil
+            ) as? [String: Any] {
+                myClientId = result?["CLIENT_ID"] as? String ?? ""
+            }
+        }
+
+		GIDSignIn.sharedInstance().clientID = myClientId
 
 		GIDSignIn.sharedInstance().delegate = self
 
