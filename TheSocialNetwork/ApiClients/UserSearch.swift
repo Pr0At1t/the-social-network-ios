@@ -9,10 +9,21 @@
 import Alamofire
 import SwiftyJSON
 
-class UserSearchClient {
+/// ApiClient for user search in the backend database
+open class UserSearchClient {
 	init() {}
 
-	public func searchForUser(with searchString: String, completion: @escaping ([String]) -> Void) -> DataRequest {
+    /**
+        Search for a user with the given searchString in the
+        backend user database and get back an array of users as strings
+        - parameters:
+            - searchString: User's name(first or last) or email used to search the backend database
+            - completion:
+             Callback that is called with the result which is
+                an array of Strings where each element is the user's name
+        - returns: An optional DataRequest object which is used to cancel redundant requests
+     */
+	public func searchForUser(with searchString: String, completion: @escaping ([String]) -> Void) -> DataRequest? {
 		let parameters: [String: Any] = [
 			"searchText": searchString
 		]
@@ -32,6 +43,7 @@ class UserSearchClient {
 		}
 	}
 
+    /// Helper function to extract firstName and lastName from raw user data, used by the above function
 	private func extractUsers(from data: Any) -> [String] {
 		let json = JSON(data)
 		if let usersData = json.array {

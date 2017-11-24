@@ -6,19 +6,22 @@
 //  Copyright © 2017 Pr0At1t. All rights reserved.
 //
 
-enum ApiRoute: String {
+public enum ApiRoute: String {
 	case userSearch = "/search"
 	case googleLogin = "/googleLogin"
     case registerUser = "/register"
 
-	func getUrlString() -> String {
+	public func getUrlString() -> String {
 		return "\(Keys.apiBaseUrl)\(self.rawValue)"
 	}
 }
 
-struct ApiClients {
-	public static let userSearchClient = UserSearchClient()
-	public static let authenticationClient = AuthenticationClient()
+public protocol ApiClientsProtocol {
+    var userSearchClient: UserSearchClient { get }
+    var authenticationClient: AuthenticationClient { get }
+}
 
-	private init() {}
+public struct ApiClients: ApiClientsProtocol {
+	public let userSearchClient = UserSearchClient()
+	public let authenticationClient = AuthenticationClient()
 }

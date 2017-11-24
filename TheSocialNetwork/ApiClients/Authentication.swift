@@ -9,12 +9,12 @@
 import Alamofire
 import SwiftyJSON
 
-enum RegistrationStatus {
+public enum RegistrationStatus {
     case success(status: Bool)
     case failure(errors: [ValidationError])
 }
 
-enum ValidationError {
+public enum ValidationError {
     case email(message: String)
     case password(message: String)
     case firstName(message: String)
@@ -34,7 +34,7 @@ enum ValidationError {
 	}
 }
 
-class AuthenticationClient {
+open class AuthenticationClient {
 
 	init() {}
 
