@@ -47,13 +47,6 @@ class AppReducerTests: QuickSpec {
                 expect(appState.userSearchState.currentRequest).to(beNil())
             }
 
-            it("correctly passes the action down to signInReducer") {
-                let action = GoogleSignInAction()
-                let appState = appReducer(action: action, state: nil)
-
-                expect(appState.signInState.signingIn).to(beTrue())
-            }
-
             it("correctly passes the action down to signUpReducer") {
                 let action = SignUpAction(email: "", password: "", firstName: "", lastName: "", country: "", dob: "")
                 let appState = appReducer(action: action, state: nil)

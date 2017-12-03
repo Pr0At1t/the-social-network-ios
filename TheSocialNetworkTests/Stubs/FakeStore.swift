@@ -46,7 +46,8 @@ public class FakeStore: Store<AppState> {
             signUpState: SignUpState(isRegistered: false,
                                      errorState: SignUpErrorState(errors: [], numFails: 0),
                                      numTries: 0
-                         )
+                         ),
+            googleSignInState: GoogleSignInState(email: "", fullName: "", firstName: "", lastName: "")
         )
 
         let fakeReducer = { (action: Action, state: AppState?) -> AppState in
