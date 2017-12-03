@@ -19,7 +19,7 @@ class FetchUsersActionTests: QuickSpec {
             var fakeStore: FakeStore!
 
             beforeEach {
-                fetchUsers = FetchUsersFactory().makeFetchUsers(apiClients: FakeApiClients())
+                fetchUsers = makeFetchUsers(apiClients: FakeApiClients())
                 fakeStore = FakeStore()
             }
 

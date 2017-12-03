@@ -9,16 +9,8 @@
 import ReSwift
 
 struct GoogleSignInState: StateType {
-    var googleEmail: String
-    var googleToken: String
-}
-
-extension GoogleSignInState: CustomStringConvertible {
-    var description: String {
-        return """
-        googleSignInState:
-                googleEmail: \(googleEmail)
-                googleToken: \(googleToken)
-        """
-    }
+    let email: String
+    let fullName: String
+    let firstName: String
+    let lastName: String
 }

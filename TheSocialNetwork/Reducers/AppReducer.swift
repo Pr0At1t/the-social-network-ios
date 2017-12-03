@@ -9,8 +9,6 @@
 import ReSwift
 
 func appReducer(action: Action, state: AppState?) -> AppState {
-    print(state ?? "NO STATE")
-
 	return AppState(
 		userSearchState: userSearchReducer(action: action, state: state?.userSearchState),
 		signInState: signInReducer(action: action, state: state?.signInState),

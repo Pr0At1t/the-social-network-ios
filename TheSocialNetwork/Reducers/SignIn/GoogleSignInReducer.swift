@@ -8,28 +8,44 @@
 
 import ReSwift
 
+typealias GoogleSignInActionPropertyEvalutor = (GoogleSignInAction) -> String
+
 let googleSignInReducer: Reducer<GoogleSignInState> = { action, state in
-    return GoogleSignInState(googleEmail: googleEmail(action, state?.googleEmail), googleToken: googleToken(action, state?.googleToken))
+    return GoogleSignInState(
+        email: email(action, state?.email),
+        fullName: fullName(action, state?.fullName),
+        firstName: firstName(action, state?.firstName),
+        lastName: lastName(action, state?.lastName)
+    )
 }
 
-let googleEmail: Reducer<String> = { action, state in
-    var state = state ?? ""
+func makeGoogleSignInReducer(_ propertyEvaluator: @escaping GoogleSignInActionPropertyEvalutor) -> Reducer<String> {
+    return { action, state in
+        let state = state ?? ""
 
-    switch action {
-    case let googleSignInSuccess as GoogleSignInSuccess:
-        return state != googleSignInSuccess.email ? googleSignInSuccess.email : state
-    default:
-        return state
+        switch action {
+        case let googleSignInAction as GoogleSignInAction:
+            let newState = propertyEvaluator(googleSignInAction)
+            return state != newState ? newState : state
+        default:
+            return state
+        }
     }
 }
 
-let googleToken: Reducer<String> = { action, state in
-    var state = state ?? ""
-
-    switch action {
-    case let googleSignInSuccess as GoogleSignInSuccess:
-        return state != googleSignInSuccess.token ? googleSignInSuccess.token : state
-    default:
-        return state
-    }
+let email = makeGoogleSignInReducer() { action in
+    return action.email
 }
+
+let fullName = makeGoogleSignInReducer() { action in
+    return action.fullName
+}
+
+let firstName = makeGoogleSignInReducer() { action in
+    return action.firstName
+}
+
+let lastName = makeGoogleSignInReducer() { action in
+    return action.lastName
+}
+

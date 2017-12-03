@@ -11,21 +11,19 @@ import Alamofire
 
 public typealias FetchUsersAsyncActionCreatorProvider = (String) -> (AppState, Store<AppState>) -> FetchUsersAction?
 
-open class FetchUsersFactory {
-    public func makeFetchUsers(apiClients: ApiClientsProtocol) -> FetchUsersAsyncActionCreatorProvider {
-        return { searchString in
-            return { state, store in
-                let request = apiClients.userSearchClient.searchForUser(with: searchString) { (users: [String]) in
-                    store.dispatch(LoadUsersAction(users: users))
-                }
-
-                return FetchUsersAction(currentRequest: request)
+public func makeFetchUsers(apiClients: ApiClientsProtocol) -> FetchUsersAsyncActionCreatorProvider {
+    return { searchString in
+        return { state, store in
+            let request = apiClients.userSearchClient.searchForUser(with: searchString) { (users: [String]) in
+                store.dispatch(LoadUsersAction(users: users))
             }
+
+            return FetchUsersAction(currentRequest: request)
         }
     }
 }
 
-let fetchUsers = FetchUsersFactory().makeFetchUsers(apiClients: ApiClients())
+let fetchUsers = makeFetchUsers(apiClients: ApiClients.sharedInstance)
 
 public struct FetchUsersAction: Action {
 	let currentRequest: DataRequest?
