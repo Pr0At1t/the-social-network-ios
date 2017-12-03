@@ -33,19 +33,19 @@ func makeGoogleSignInReducer(_ propertyEvaluator: @escaping GoogleSignInActionPr
     }
 }
 
-let email = makeGoogleSignInReducer() { action in
+let email = makeGoogleSignInReducer { action in
     return action.email
 }
 
-let fullName = makeGoogleSignInReducer() { action in
+let fullName = makeGoogleSignInReducer { action in
     return action.fullName
 }
 
-let firstName = makeGoogleSignInReducer() { action in
+let firstName = makeGoogleSignInReducer { action in
     return action.firstName
 }
 
-let lastName = makeGoogleSignInReducer() { action in
+let lastName = makeGoogleSignInReducer { action in
     return action.lastName
 }
 
