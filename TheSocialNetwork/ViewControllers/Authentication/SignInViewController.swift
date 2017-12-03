@@ -70,7 +70,19 @@ extension SignInViewController: GIDSignInDelegate {
 			return
 		}
 
-		store.dispatch(googleSignIn(idToken: user.authentication.idToken))
+        let idToken = user.authentication.idToken ?? ""
+        let fullName = user.profile.name ?? ""
+        let firstName = user.profile.givenName ?? ""
+        let lastName = user.profile.familyName ?? ""
+        let email = user.profile.email ?? ""
+
+		store.dispatch(googleSignIn(
+            email: email,
+            fullName: fullName,
+            firstName: firstName,
+            lastName: lastName,
+            idToken: idToken
+        ))
 	}
 
 	func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {

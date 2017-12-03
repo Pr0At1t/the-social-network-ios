@@ -22,6 +22,10 @@ public protocol ApiClientsProtocol {
 }
 
 public struct ApiClients: ApiClientsProtocol {
+    private init() {}
+
+    public static let sharedInstance = ApiClients()
+
 	public let userSearchClient = UserSearchClient()
 	public let authenticationClient = AuthenticationClient()
 }

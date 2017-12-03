@@ -8,14 +8,17 @@
 
 import ReSwift
 
-func googleSignIn(idToken: String) -> (AppState, Store<AppState>) -> GoogleSignInAction {
+func googleSignIn(email: String, fullName: String, firstName: String, lastName: String, idToken: String) -> (AppState, Store<AppState>) -> GoogleSignInAction {
     return { state, store in
-        ApiClients().authenticationClient.signInWithGoogle(idToken: idToken) { response in
-            store.dispatch(GoogleSignInSuccess(email: "atulbipin@gmail.com", token: "LOLLOL123"))
-        }
+        ApiClients.sharedInstance.authenticationClient.signInWithGoogle(idToken: idToken, completion: { _ in })
 
-        return GoogleSignInAction()
+        return GoogleSignInAction(email: email, fullName: fullName, firstName: firstName, lastName: lastName)
     }
 }
 
-struct GoogleSignInAction: Action {}
+struct GoogleSignInAction: Action {
+    let email: String
+    let fullName: String
+    let firstName: String
+    let lastName: String
+}
