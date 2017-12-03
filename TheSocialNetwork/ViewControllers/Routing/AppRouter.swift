@@ -12,6 +12,7 @@ enum RoutingDestination: String {
 	case signin = "SignInViewController"
 	case userSearch = "UserSearch"
     case register = "SignUp"
+    case userProfile = "UserProfile"
 }
 
 final class AppRouter {

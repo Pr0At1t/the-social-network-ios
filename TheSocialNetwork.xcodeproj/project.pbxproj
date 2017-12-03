@@ -44,6 +44,8 @@
 		5280E9D27DCA615E44920BC6 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F93D97FC99D325DCA1C7FF /* CoreText.framework */; };
 		64E04BB2010AE20634C51FDF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D36DF859E7BF4D40B739C16 /* AVFoundation.framework */; };
 		68EE3AE676979AC7FAB6BDB0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D140A40CB79D835BA2DAC11F /* CoreMedia.framework */; };
+		6A242EC61FD4A67100CCB9B6 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A242EC51FD4A67100CCB9B6 /* UserProfile.storyboard */; };
+		6A242ECB1FD4ABB900CCB9B6 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A242ECA1FD4ABB900CCB9B6 /* UserProfileViewController.swift */; };
 		6A63EA0B1F9D4BB800D2D12E /* UserSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A63EA0A1F9D4BB800D2D12E /* UserSearch.storyboard */; };
 		6A63EA111F9D53A800D2D12E /* UserSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A63EA101F9D53A800D2D12E /* UserSearchTableViewController.swift */; };
 		6A9FF2201F9C59C400E36B14 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9FF21F1F9C59C400E36B14 /* SignUp.storyboard */; };
@@ -120,6 +122,8 @@
 		3DD115965926E021CC16B563 /* Pods-TheSocialNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheSocialNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheSocialNetwork/Pods-TheSocialNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		49C5E0DFDA184D811FFEAF17 /* Pods-TheSocialNetworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheSocialNetworkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheSocialNetworkTests/Pods-TheSocialNetworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		60E7E9C10653A1156C99E7A0 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		6A242EC51FD4A67100CCB9B6 /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
+		6A242ECA1FD4ABB900CCB9B6 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		6A63EA0A1F9D4BB800D2D12E /* UserSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserSearch.storyboard; sourceTree = "<group>"; };
 		6A63EA101F9D53A800D2D12E /* UserSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchTableViewController.swift; sourceTree = "<group>"; };
 		6A9FF21F1F9C59C400E36B14 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 		398259EE1F9A3022004ED28B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6A242EC71FD4AB7000CCB9B6 /* UserProfile */,
 				39D5DC2C1FA7518B00BA45C7 /* UserSearch */,
 				39F69A191FA71858006426CB /* Routing */,
 				39915F451F9C11CD00861A37 /* Authentication */,
@@ -232,6 +237,7 @@
 		39D5DC2D1FA7526800BA45C7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6A242EC41FD4A64700CCB9B6 /* UserProfile */,
 				39D5DC301FA752A200BA45C7 /* Registration */,
 				39D5DC2F1FA7529700BA45C7 /* UserSearch */,
 				39D5DC2E1FA7526E00BA45C7 /* SignIn */,
@@ -429,6 +435,22 @@
 			path = ApiClients;
 			sourceTree = "<group>";
 		};
+		6A242EC41FD4A64700CCB9B6 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				6A242EC51FD4A67100CCB9B6 /* UserProfile.storyboard */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		6A242EC71FD4AB7000CCB9B6 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				6A242ECA1FD4ABB900CCB9B6 /* UserProfileViewController.swift */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
 		6AED346B1FAC2BEE00CF3B0E /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,6 +619,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A242EC61FD4A67100CCB9B6 /* UserProfile.storyboard in Resources */,
 				39EC41EE1F9A223300071ED1 /* LaunchScreen.storyboard in Resources */,
 				39EC41EB1F9A223300071ED1 /* Assets.xcassets in Resources */,
 				39B6DC581F9CFE2D005526ED /* GoogleService-Info.plist in Resources */,
@@ -791,6 +814,7 @@
 				39F69A0E1FA6E89F006426CB /* AppRouter.swift in Sources */,
 				39D5DC351FA7547100BA45C7 /* SignInState.swift in Sources */,
 				39F69A201FA722C2006426CB /* UserSearchState.swift in Sources */,
+				6A242ECB1FD4ABB900CCB9B6 /* UserProfileViewController.swift in Sources */,
 				39EC41E11F9A223300071ED1 /* AppDelegate.swift in Sources */,
 				6A63EA111F9D53A800D2D12E /* UserSearchTableViewController.swift in Sources */,
 				39F69A2D1FA7257F006426CB /* ApiClients.swift in Sources */,

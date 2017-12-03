@@ -47,7 +47,7 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
 	}
 
 	@IBAction func signInButtonPressed() {
-        self.appDelegate?.appRouter?.pushViewController(identifier: RoutingDestination.userSearch.rawValue)
+        self.appDelegate?.appRouter?.pushViewController(identifier: RoutingDestination.userProfile.rawValue)
 	}
 
 	@IBAction func signInWithGoogleButtonPressed() {
