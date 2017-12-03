@@ -42,11 +42,15 @@ public class FakeStore: Store<AppState> {
     convenience init() {
         let mockAppState = AppState(
             userSearchState: UserSearchState(loading: false, users: [], currentRequest: nil),
-            signInState: SignInState(response: nil, signingIn: false),
-            signUpState: SignUpState(isRegistered: false,
-                                     errorState: SignUpErrorState(errors: [], numFails: 0),
-                                     numTries: 0
-                         )
+            signInState: SignInState(
+                response: nil,
+                signingIn: false,
+                signedIn: false,
+                email: "",
+                errorState: SignInErrorState(errors: [])),
+            signUpState: SignUpState(
+                isRegistered: false,
+                errorState: SignUpErrorState(errors: []))
         )
 
         let fakeReducer = { (action: Action, state: AppState?) -> AppState in

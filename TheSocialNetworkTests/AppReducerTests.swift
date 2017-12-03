@@ -30,9 +30,7 @@ class AppReducerTests: QuickSpec {
                 expect(appState.signInState.signingIn).to(beFalse())
 
                 expect(appState.signUpState.isRegistered).to(beFalse())
-                expect(appState.signUpState.numTries).to(equal(0))
                 expect(appState.signUpState.errorState.errors).to(beEmpty())
-                expect(appState.signUpState.errorState.numFails).to(equal(0))
             }
 
             it("correctly passes the action down to userSearchReducer") {
@@ -56,9 +54,6 @@ class AppReducerTests: QuickSpec {
 
             it("correctly passes the action down to signUpReducer") {
                 let action = SignUpAction(email: "", password: "", firstName: "", lastName: "", country: "", dob: "")
-                let appState = appReducer(action: action, state: nil)
-
-                expect(appState.signUpState.numTries).to(equal(1))
             }
         }
     }
