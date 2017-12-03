@@ -7,7 +7,6 @@ target 'TheSocialNetwork' do
     pod 'ReSwift'
     pod 'SwiftLint'
     pod 'GoogleSignIn'
-    pod 'GGLSignIn'
     pod 'Alamofire'
     pod 'SwiftyJSON'
 
