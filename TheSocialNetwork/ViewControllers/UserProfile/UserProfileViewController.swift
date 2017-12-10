@@ -9,25 +9,18 @@
 import UIKit
 
 class UserProfileViewController: UIViewController {
+    
+    @IBOutlet weak var emailField: UserProfileField!
+    @IBOutlet weak var nameField: UserProfileField!
+    @IBOutlet weak var dobField: UserProfileField!
+    @IBOutlet weak var countryField: UserProfileField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.emailField.value = "atulbipin@gmail.com"
+        self.nameField.value = "Atul"
+        self.dobField.value = "16/08/1998"
+        self.countryField.value = "UAE"
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
