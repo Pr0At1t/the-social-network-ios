@@ -25,10 +25,12 @@ class SignInTextField: UITextField, UITextFieldDelegate {
 		}
 	}
 
+    // To make sure it can't be initialised in the code
 	override init(frame: CGRect) {
 		fatalError("SignInTextField should not be inititalized in code")
 	}
 
+//    Used in storyboard
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		self.setupTextView()
