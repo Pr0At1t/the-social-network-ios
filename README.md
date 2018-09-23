@@ -1,3 +1,3 @@
 # the-social-network-ios
 
-(https://raw.githubusercontent.com/pranavjain97/pranavjain97.github.io/master/Signup_Screen.png)
+https://github.com/Pr0At1t/the-social-network-ios/blob/master/Signup_Screen.png
